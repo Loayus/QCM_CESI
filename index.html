@@ -193,7 +193,7 @@ function start(data) {
     card.className = "card";
     const multi = q.type === "multiple";
     let h = `<div class="qhead"><span>Question ${qi+1}</span><span>${multi ? "Réponses multiples" : "Réponse unique"}</span></div>`;
-    h += `<p class="enonce">${fmt(q.enonce)}</p>`;
+    if (q.enonce) h += `<p class="enonce">${fmt(q.enonce)}</p>`;
     h += media(q);
     q.propositions.forEach((p, pi) => {
       h += `<label class="prop"><input type="${multi ? "checkbox" : "radio"}" name="q${qi}" data-q="${qi}" data-p="${pi}">
@@ -227,6 +227,7 @@ function media(q) {
 }
 function propBody(p) {
   if (p.image) return imgHtml(p.image);
+  if (p.texte == null) return "";
   return p.code ? `<pre><code>${esc(p.texte.replace(/\n+$/,""))}</code></pre>` : fmt(p.texte);
 }
 
@@ -251,7 +252,7 @@ function gradeQuestion(q, given) {
   q.propositions.forEach((_, i) => { if (expected.has(i) !== given.has(i)) disc++; });
   let pts = 0;
   if (given.size > 0) {
-    const table = (quiz.bareme && quiz.bareme[q.type]) || {};
+    const table = q.bareme || (quiz.bareme && quiz.bareme[q.type]) || {};
     pts = table[disc] ?? 0;
   }
   return { expected, disc, pts, answered: given.size > 0 };
@@ -286,7 +287,7 @@ function showResult() {
     card.className = "card res " + cls; card.dataset.cls = cls;
     let h = `<div class="qhead"><span>Question ${qi+1}</span>
       <span class="pts">${fmtN(r.pts)} / 1${r.answered ? "" : " - pas de réponse"}${r.answered && r.disc ? " - " + r.disc + " discordance" + (r.disc>1?"s":"") : ""}</span></div>`;
-    h += `<p class="enonce">${fmt(q.enonce)}</p>`;
+    if (q.enonce) h += `<p class="enonce">${fmt(q.enonce)}</p>`;
     h += media(q);
     q.propositions.forEach((p, pi) => {
       const exp = r.expected.has(pi), mine = given.has(pi);
@@ -297,7 +298,7 @@ function showResult() {
       h += `<div class="prop static ${state}"><span class="letter">${LETTERS[pi]}</span>
         <span class="body">${propBody(p)}</span>${tags}</div>`;
     });
-    if (q.explication) h += `<div class="explication"><b class="t">Explication</b>${fmt(q.explication)}</div>`;
+    if (q.explication || q.explication_image) h += `<div class="explication"><b class="t">Explication</b>${q.explication ? fmt(q.explication) : ""}${q.explication_image ? imgHtml(q.explication_image) : ""}</div>`;
     card.innerHTML = h;
     box.appendChild(card);
   });

@@ -1,0 +1,509 @@
+# QCM : Sciences fondamentales - Mathématiques (CCTL)
+# Source : correction de l'examen du 15/11/2026 (dossier ressources/)
+# Même format que sciences-numerique-cctl.yml. Champs supplémentaires utilisés ici :
+#   bareme: (par question)      -> remplace le barème global pour cette question (Q13 : 4 propositions)
+#   explication_image: ...      -> image affichée dans la correction (Q43, Q44)
+# Images attendues dans qcm/images/maths/ :
+#   q22-a..e  q38  q39  q43 q43-a..e q43-expl  q44 q44-a..e q44-expl   (.png)
+
+titre: "Sciences fondamentales - Mathématiques (CCTL)"
+note_sur: 20
+
+bareme:
+  unique:
+    0: 1
+  multiple:
+    0: 1
+    1: 0.5
+    2: 0.2
+
+questions:
+  - id: 1
+    type: multiple
+    enonce: "Si la probabilité de gagner à un jeu est de 1/4, quelle est la probabilité de perdre (en supposant qu'il n'y a pas de match nul) ?"
+    propositions:
+      - {texte: "1/4"}
+      - {texte: "1/2"}
+      - {texte: "3/4", correcte: true}
+      - {texte: "1"}
+      - {texte: "0"}
+
+  - id: 2
+    type: multiple
+    enonce: "Dans un jeu avec un dé à six faces équilibré, quelle est la probabilité d'obtenir un nombre inférieur à 3 ?"
+    propositions:
+      - {texte: "1/6"}
+      - {texte: "1/3", correcte: true}
+      - {texte: "1/2"}
+      - {texte: "2/3"}
+      - {texte: "5/6"}
+
+  - id: 3
+    type: multiple
+    enonce: "Comment appelle-t-on un jeu où les joueurs prennent leurs décisions les uns après les autres, plutôt que simultanément ?"
+    propositions:
+      - {texte: "Jeu statique"}
+      - {texte: "Jeu à somme nulle"}
+      - {texte: "Jeu séquentiel (ou dynamique)", correcte: true}
+      - {texte: "Jeu coopératif"}
+      - {texte: "Jeu symétrique"}
+
+  - id: 4
+    type: multiple
+    enonce: "Dans un jeu à somme nulle simple, si une stratégie garantit à un joueur un gain minimum de X, quelle que soit la stratégie de l'adversaire, cette stratégie est dite :"
+    propositions:
+      - {texte: "Une stratégie d'entente coopérative tacite, par laquelle le joueur s'assure ce gain fixe en supposant que l'adversaire adoptera délibérément un comportement visant à minimiser les pertes globales du système."}
+      - {texte: "Aléatoire"}
+      - {texte: "Maximin (pour le joueur qui maximise son minimum)", correcte: true}
+      - {texte: "Dominée"}
+      - {texte: "Incomplète"}
+
+  - id: 5
+    type: multiple
+    enonce: "Quelle mesure statistique représente la valeur centrale qui sépare un ensemble de données ordonnées en deux moitiés égales ?"
+    propositions:
+      - {texte: "La moyenne"}
+      - {texte: "La médiane", correcte: true}
+      - {texte: "Le mode"}
+      - {texte: "L'écart-type"}
+      - {texte: "La variance"}
+
+  - id: 6
+    type: multiple
+    enonce: "Que mesure l'écart-type d'un ensemble de données ?"
+    propositions:
+      - {texte: "La valeur la plus fréquente."}
+      - {texte: "La tendance centrale des données."}
+      - {texte: "La dispersion", correcte: true}
+      - {texte: "Le nombre total d'observations."}
+      - {texte: "L'asymétrie de la distribution."}
+
+  - id: 7
+    type: multiple
+    enonce: "Quel type de graphique est couramment utilisé pour visualiser la relation entre deux variables quantitatives ?"
+    propositions:
+      - {texte: "Histogramme"}
+      - {texte: "Diagramme en barres"}
+      - {texte: "Nuage de points", correcte: true}
+      - {texte: "Diagramme circulaire"}
+      - {texte: "Boîte à moustaches (Box plot)"}
+
+  - id: 8
+    type: multiple
+    enonce: "Si la valeur mesurée d'un objet est 5.2 cm et sa valeur réelle est 5.0 cm, quelle est l'erreur absolue de la mesure ?"
+    propositions:
+      - {texte: "5.2 cm"}
+      - {texte: "5.0 cm"}
+      - {texte: "0.2 cm", correcte: true}
+      - {texte: "10.2 cm"}
+      - {texte: "2%"}
+
+  - id: 9
+    type: multiple
+    enonce: "Quelle est la première étape typique dans la construction d'un test d'hypothèse statistique ?"
+    propositions:
+      - {texte: "Collecter les données."}
+      - {texte: "Calculer la statistique de test."}
+      - {texte: "Formuler l'hypothèse nulle ($H_0$) et l'hypothèse alternative ($H_1$).", correcte: true}
+      - {texte: "Choisir le seuil de signification $\\alpha$."}
+      - {texte: "Tirer une conclusion."}
+
+  - id: 10
+    type: multiple
+    enonce: "Dans un tableau de résultats d'une enquête, si 60% des répondants sont des femmes, cela signifie que :"
+    propositions:
+      - {texte: "60 femmes exactement ont répondu."}
+      - {texte: "Sur 100 répondants, on s'attendrait à trouver 60 femmes.", correcte: true}
+      - {texte: "Les hommes représentent 60% des répondants."}
+      - {texte: "L'enquête n'est pas représentative."}
+      - {texte: "Toutes les femmes interrogées ont le même avis."}
+
+  - id: 11
+    type: multiple
+    enonce: "Si la moyenne d'un ensemble de notes d'examen est de 75 et l'écart-type est de 5, que pouvez-vous en déduire concernant la dispersion des notes ?"
+    propositions:
+      - {texte: "Toutes les notes sont comprises entre 70 et 80."}
+      - {texte: "La note la plus fréquente est 75."}
+      - {texte: "La plupart des notes se situent relativement près de 75, avec une dispersion typique d'environ 5 points autour de cette moyenne.", correcte: true}
+      - {texte: "Il y a autant de notes au-dessus qu'en dessous de 75."}
+      - {texte: "Les notes sont uniformément réparties."}
+
+  - id: 12
+    type: multiple
+    enonce: "Lorsqu'on utilise le Z-score pour détecter des anomalies, une valeur est typiquement considérée comme anormale si son Z-score est :"
+    propositions:
+      - {texte: "Proche de 0."}
+      - {texte: "Égal à 1."}
+      - {texte: "Inférieur à 1."}
+      - {texte: "Très élevé (par exemple, > 3) ou très bas (par exemple, < -3) en valeur absolue.", correcte: true}
+      - {texte: "Positif."}
+
+  - id: 13
+    type: multiple
+    bareme: {0: 1, 1: 0.5, 2: 0.1}
+    enonce: "Voici un algorithme implémenté en Python. Quelle est sa complexité temporelle ?"
+    code: |
+      for i in range(len(arr) - 1):
+          for j in range(i + 1, len(arr)):
+              print(arr[i] * arr[j])
+    propositions:
+      - {texte: "$O(n)$"}
+      - {texte: "$O(n^2)$", correcte: true}
+      - {texte: "$O(n.m)$"}
+      - {texte: "$O(n^3)$"}
+
+  - id: 14
+    type: multiple
+    enonce: "À quoi sert principalement l'algorithme d'Euclide en cryptographie, notamment dans RSA ?"
+    propositions:
+      - {texte: "À générer de grands nombres premiers."}
+      - {texte: "À calculer le plus grand commun diviseur (PGCD) de deux nombres, étape clé pour vérifier des conditions ou calculer des inverses modulaires.", correcte: true}
+      - {texte: "À chiffrer directement des messages longs."}
+      - {texte: "À compresser les données avant chiffrement."}
+      - {texte: "À tester la robustesse d'une clé de chiffrement."}
+
+  - id: 15
+    type: multiple
+    enonce: "Si un modèle mathématique prédit un résultat X, mais que l'expérience donne un résultat Y significativement différent, quelle première démarche d'analyse est pertinente ?"
+    propositions:
+      - {texte: "Conclure immédiatement que le modèle est faux."}
+      - {texte: "Conclure immédiatement que l'expérience est erronée."}
+      - {texte: "Vérifier les hypothèses du modèle et les conditions de l'expérience pour identifier les sources possibles de divergence.", correcte: true}
+      - {texte: "Modifier les données expérimentales pour qu'elles correspondent au modèle."}
+      - {texte: "Publier uniquement le résultat théorique."}
+
+  - id: 16
+    type: unique
+    enonce: "Un étudiant affirme que la température des serveurs suit une loi normale. Or, pour une loi normale, environ 95 % des valeurs tombent dans l'intervalle [moyenne − 2σ ; moyenne + 2σ]. En analysant ses relevés, il constate que seulement 78 % des valeurs tombent dans cet intervalle et que l'histogramme est nettement asymétrique vers la droite. Quelle conclusion l'analyse permet-elle ?"
+    propositions:
+      - {texte: "Les données confirment la loi normale, car moyenne et écart-type ont pu être calculés"}
+      - {texte: "L'écart entre la proportion observée (78 %) et la proportion théorique (95 %), ajouté à l'asymétrie, indique que la loi normale décrit mal ces données", correcte: true}
+      - {texte: "Il faut augmenter σ jusqu'à ce que 95 % des données rentrent dans l'intervalle"}
+      - {texte: "L'asymétrie n'a aucune importance tant que la moyenne est correcte"}
+
+  - id: 17
+    type: multiple
+    enonce: "Pour modéliser un réseau social où les personnes sont des nœuds et une amitié est un lien, quel type de structure mathématique est le plus souvent utilisé ?"
+    propositions:
+      - {texte: "Une série temporelle."}
+      - {texte: "Une matrice de transition."}
+      - {texte: "Un graphe (souvent non orienté).", correcte: true}
+      - {texte: "Un automate fini."}
+      - {texte: "Une équation différentielle."}
+
+  - id: 18
+    type: multiple
+    enonce: "On considère que `node` est un élément d'un arbre binaire équilibré, et `x` l'élément à rechercher. Quelle est la complexité temporelle dans le pire des cas ?"
+    code: |
+      def search(node, x):
+          if node is None:
+              return False
+          if x == node.value:
+              return True
+          if x < node.value:
+              return search(node.left, x)
+          else:
+              return search(node.right, x)
+    propositions:
+      - {texte: "$O(n)$"}
+      - {texte: "$O(n^2)$"}
+      - {texte: "$O(1)$"}
+      - {texte: "$O(e^n)$"}
+      - {texte: "$O(\\log n)$", correcte: true}
+
+  - id: 19
+    type: unique
+    enonce: "Quelle définition correspond à la moyenne arithmétique ?"
+    propositions:
+      - {texte: "La valeur centrale d'une série"}
+      - {texte: "La somme des valeurs divisée par leur nombre", correcte: true}
+      - {texte: "La valeur la plus fréquente"}
+      - {texte: "La différence entre maximum et minimum"}
+      - {texte: "La valeur la plus grande"}
+
+  - id: 20
+    type: unique
+    enonce: "Que représente le troisième quartile (Q3) ?"
+    propositions:
+      - {texte: "25 % des valeurs sont inférieures"}
+      - {texte: "50 % des valeurs sont inférieures"}
+      - {texte: "75 % des valeurs sont inférieures", correcte: true}
+      - {texte: "La valeur maximale"}
+      - {texte: "La moyenne des valeurs"}
+
+  - id: 21
+    type: unique
+    enonce: "Une série avec une moyenne élevée et un écart-type élevé indique :"
+    propositions:
+      - {texte: "Données homogènes"}
+      - {texte: "Données très dispersées", correcte: true}
+      - {texte: "Données constantes"}
+      - {texte: "Absence de données"}
+      - {texte: "Corrélation parfaite"}
+
+  - id: 22
+    type: unique
+    enonce: "Dans un jeu de dés, un joueur lance simultanément trois dés à 6 faces équilibrés. Quelle est la probabilité que tous les trois affichent le même résultat (un « triplet ») ?"
+    propositions:
+      - {image: "images/maths/q22-a.png", correcte: true}
+      - {image: "images/maths/q22-b.png"}
+      - {image: "images/maths/q22-c.png"}
+      - {image: "images/maths/q22-d.png"}
+      - {image: "images/maths/q22-e.png"}
+
+  - id: 23
+    type: unique
+    enonce: "Un joueur est dans un labyrinthe à 3 sorties : la sortie 1 (probabilité 0.5), la sortie 2 (0.3) et la sortie 3 (0.2). La sortie 1 mène à la victoire avec probabilité 0.8 ; la sortie 2, avec probabilité 0.4 ; la sortie 3, avec probabilité 0.1. La probabilité de gagner est (théorème des probabilités totales)"
+    propositions:
+      - {texte: "0.80"}
+      - {texte: "0.50"}
+      - {texte: "0.54", correcte: true}
+      - {texte: "0.43"}
+      - {texte: "0.20"}
+
+  - id: 24
+    type: unique
+    enonce: "Un joueur professionnel de fléchettes touche la cible avec probabilité p = 0.8 par lancer. Il doit toucher la cible au moins une fois sur 3 lancers pour remporter la manche. La probabilité de remporter la manche est :"
+    propositions:
+      - {texte: "0.80"}
+      - {texte: "0.96"}
+      - {texte: "0.992", correcte: true}
+      - {texte: "0.512"}
+      - {texte: "1.000"}
+    explication: |
+      Soit G l'événement « remporter la manche ».
+      $P(G) = 1 - P(\text{aucun succès en 3 lancers})$
+
+  - id: 25
+    type: unique
+    enonce: "Dans un jeu de rôle, le nombre de monstres qui attaquent un personnage par heure suit une loi de Poisson de paramètre $\\lambda = 3$. La probabilité de recevoir exactement 2 attaques en une heure est :"
+    propositions:
+      - {texte: "$\\dfrac{9}{2}e^{-3} \\approx 0{,}224$", correcte: true}
+      - {texte: "$3e^{-3}$"}
+      - {texte: "$e^{-3}$"}
+      - {texte: "$\\dfrac{27}{6}e^{-3}$"}
+      - {texte: "$e^{-3}/2$"}
+
+  - id: 26
+    type: unique
+    enonce: "Dans un tournoi sportif modélisé comme un jeu à somme nulle, une équipe A applique une stratégie mixte optimale. Quelle propriété fondamentale cette stratégie satisfait-elle ?"
+    propositions:
+      - {texte: "Elle garantit de gagner chaque match avec certitude"}
+      - {texte: "Elle maximise le gain espéré si l'adversaire joue une stratégie fixe connue"}
+      - {texte: "Elle est dominante au sens strict dans le jeu étendu"}
+      - {texte: "Elle garantit le meilleur gain espéré possible contre un adversaire jouant de manière optimale.", correcte: true}
+      - {texte: "Elle est identique à la stratégie maximin en stratégies pures"}
+
+  - id: 27
+    type: unique
+    enonce: "Dans un jeu vidéo, un personnage a une probabilité p = 0.25 de trouver un objet rare à chaque coffre ouvert. Le joueur ouvre les coffres jusqu'à trouver son premier objet rare. L'espérance du nombre de coffres ouverts est :"
+    propositions:
+      - {texte: "0.25"}
+      - {texte: "1"}
+      - {texte: "3"}
+      - {texte: "4", correcte: true}
+      - {texte: "8"}
+    explication: |
+      Le nb de coffres ouvers X suit une loi géométrique de paramètre p=0.25. Donc l'espérance est $E[X] = 1/p = 1/0.25 = 4$
+
+  - id: 28
+    type: unique
+    enonce: "Un analyste doit détecter des anomalies dans une série temporelle :\n• comportant quelques valeurs extrêmes importantes ;\n• présentant une distribution asymétrique ;\n• contenant plusieurs milliers d'observations.\n\nQuelle méthode semble la plus pertinente à privilégier dans un premier temps ?"
+    propositions:
+      - {texte: "Le z-score classique."}
+      - {texte: "Un seuil basé sur un pourcentage du maximum."}
+      - {texte: "Une méthode robuste utilisant la médiane et la MAD (Median Absolute Deviation).", correcte: true}
+      - {texte: "Une méthode qui marque automatiquement les 10 % plus grandes valeurs."}
+
+  - id: 29
+    type: unique
+    enonce: "Une entreprise exécute une tâche sur le cloud.\nLe fournisseur facture :\n• 0,10 € par minute de calcul ;\n• 0,02 € par Go stocké ;\n• un abonnement fixe de 50 €.\n\nSi $t$ représente le temps de calcul et $s$ l'espace de stockage utilisé, quel modèle traduit correctement le coût total ?"
+    propositions:
+      - {texte: "$C = 0.10\\,t + 0.02\\,s + 50$", correcte: true}
+      - {texte: "$C = 0.10\\,ts + 50$"}
+      - {texte: "$C = 50\\,(t + s)$"}
+      - {texte: "$C = \\dfrac{0.10\\,t}{0.02\\,s} + 50$"}
+    explication: |
+      Le coût total est la somme des contributions indépendantes de chaque ressource et de l'abonnement fixe.
+
+  - id: 30
+    type: unique
+    enonce: "Dans une série de données fortement asymétrique étalée vers la droite (comme la distribution des salaires), comment se positionne généralement la moyenne par rapport à la médiane ?"
+    propositions:
+      - {texte: "L'écart-type devient la seule mesure pertinente."}
+      - {texte: "La moyenne est égale à la médiane."}
+      - {texte: "La médiane se rapproche de la valeur maximale."}
+      - {texte: "La moyenne est inférieure à la médiane."}
+      - {texte: "La moyenne est supérieure à la médiane.", correcte: true}
+
+  - id: 31
+    type: unique
+    enonce: "Quelle est la complexité temporelle dans le pire des cas d'une recherche dichotomique (binary search) dans un tableau trié de taille n ?"
+    propositions:
+      - {texte: "$O(1)$"}
+      - {texte: "$O(n)$"}
+      - {texte: "$O(n^2)$"}
+      - {texte: "$O(\\log n)$", correcte: true}
+      - {texte: "$O(n \\log n)$"}
+
+  - id: 32
+    type: unique
+    enonce: "En théorie des graphes, quelle est la définition exacte d'un arbre ?"
+    propositions:
+      - {texte: "Un graphe orienté comportant au moins un cycle hamiltonien."}
+      - {texte: "Un graphe connexe sans cycle.", correcte: true}
+      - {texte: "Un graphe où chaque sommet est relié à tous les autres."}
+      - {texte: "Un graphe biparti dont les sous-ensembles sont de même taille."}
+      - {texte: "Une structure de données linéaire comme une liste simplement chaînée."}
+
+  - id: 33
+    type: unique
+    enonce: "Quelle affirmation décrit le mieux la caractéristique principale d'un jeu à somme nulle entre deux joueurs ?"
+    propositions:
+      - {texte: "Il n'existe jamais de point selle dans ce type de jeu."}
+      - {texte: "La somme des gains (ou pertes) des deux joueurs est constante à chaque issue.", correcte: true}
+      - {texte: "Les joueurs peuvent coopérer pour augmenter le gain commun total."}
+      - {texte: "Les paiements de chaque joueur sont toujours égaux à la fin de la partie."}
+      - {texte: "Ce jeu ne peut être résolu qu'avec des stratégies mixtes aléatoires."}
+
+  - id: 34
+    type: unique
+    enonce: "Dans l'analyse des anomalies avec une boîte à moustaches (Boxplot), quelle est la formule classique utilisée pour définir la borne supérieure au-delà de laquelle une valeur est considérée comme aberrante (outlier) ?"
+    propositions:
+      - {texte: "Moyenne + 2 * Écart-type"}
+      - {texte: "Q1 - 1.5 * IQR"}
+      - {texte: "Q3 + 1.5 * IQR", correcte: true}
+      - {texte: "Maximum - Minimum"}
+      - {texte: "Q2 + 1.5 * IQR"}
+
+  - id: 35
+    type: unique
+    enonce: "Dans le modèle de facturation d'un fournisseur cloud exprimé par la fonction affine C(N) = 100 + 0.05 * N (où N est le volume de données sortantes en Go), que représente la valeur 0.05 ?"
+    propositions:
+      - {texte: "Le coût fixe mensuel d'abonnement."}
+      - {texte: "Le plafond maximal de facturation autorisé."}
+      - {texte: "Le coût variable unitaire par Gigaoctet transféré.", correcte: true}
+      - {texte: "La taxe forfaitaire appliquée sur la facture."}
+      - {texte: "La réduction tarifaire accordée."}
+
+  - id: 36
+    type: unique
+    enonce: "Quelle est la complexité temporelle d'un parcours en profondeur (DFS) ou en largeur (BFS) sur un graphe modélisé par des listes d'adjacence, comprenant V sommets (Vertices) et E arêtes (Edges) ?"
+    propositions:
+      - {texte: "$O(V^2)$"}
+      - {texte: "$O(V \\ast E)$"}
+      - {texte: "$O(V + E)$", correcte: true}
+      - {texte: "$O(E^2)$"}
+      - {texte: "$O(1)$"}
+
+  - id: 37
+    type: unique
+    enonce: "En statistiques inférentielles, que signifie exactement le fait qu'un estimateur (comme la moyenne empirique) soit dit \"sans biais\" ?"
+    propositions:
+      - {texte: "Il garantit de ne jamais commettre d'erreur sur un échantillon donné."}
+      - {texte: "Sa variance est toujours strictement nulle."}
+      - {texte: "Il est résistant et robuste face aux valeurs aberrantes."}
+      - {texte: "Son espérance mathématique est égale à la vraie valeur du paramètre qu'il cherche à estimer.", correcte: true}
+      - {texte: "Il est obligatoirement calculé sur la population entière."}
+
+  - id: 38
+    type: unique
+    image: "images/maths/q38.png"
+    enonce: "À partir du graphe pondéré ci-dessus, on souhaite aller du sommet A au sommet F en minimisant le coût total du chemin. Quel est le plus court chemin de A vers F ?"
+    propositions:
+      - {texte: "A→B→D→F, coût total = 12"}
+      - {texte: "A→C→E→F, coût total = 9"}
+      - {texte: "A→C→D→E→F, coût total = 6", correcte: true}
+      - {texte: "A→B→D→E→F, coût total = 10"}
+      - {texte: "A→C→D→F, coût total = 8"}
+
+  - id: 39
+    type: unique
+    image: "images/maths/q39.png"
+    enonce: "On considère le graphe non orienté pondéré suivant. Les nombres indiqués sur les arêtes représentent les coûts de connexion entre les sommets. Quel est le coût total de l'arbre couvrant minimal (ACM) de ce graphe ?"
+    propositions:
+      - {texte: "6"}
+      - {texte: "7"}
+      - {texte: "8"}
+      - {texte: "9", correcte: true}
+      - {texte: "10"}
+
+  - id: 40
+    type: unique
+    enonce: "Un graphe simple est un graphe qui :"
+    propositions:
+      - {texte: "Ne contient ni arêtes multiples entre deux sommets distincts, ni boucles.", correcte: true}
+      - {texte: "Peut contenir des arêtes multiples entre deux sommets, mais pas de boucles."}
+      - {texte: "Ne contient aucun cycle."}
+      - {texte: "Est nécessairement connexe."}
+      - {texte: "Peut relier un sommet à lui-même par une arête, à condition qu'il n'y ait pas d'arêtes multiples."}
+    explication: |
+      1. VRAI : c'est la définition d'un graphe simple : ni arêtes multiples, ni boucles.
+      2. FAUX : un graphe avec des arêtes multiples est un multigraphe.
+      3. FAUX : un graphe simple peut contenir des cycles (par exemple un triangle) ; c'est un arbre qui n'en contient pas.
+      4. FAUX : la connexité ne fait pas partie de la définition ; un graphe simple peut avoir plusieurs composantes.
+      5. FAUX : une arête reliant un sommet à lui-même est une boucle, interdite dans un graphe simple.
+
+  - id: 41
+    type: multiple
+    enonce: "Parmi les pratiques suivantes, lesquelles relèvent de l'éco-conception logicielle (green software craftsmanship) ? (3 propositions)"
+    propositions:
+      - {texte: "Choisir des structures de données et des algorithmes de complexité adaptée au volume réel traité.", correcte: true}
+      - {texte: "Augmenter systématiquement les ressources matérielles allouées pour garantir la performance perçue."}
+      - {texte: "Supprimer systématiquement le code mort, les dépendances et les fonctionnalités inutilisées.", correcte: true}
+      - {texte: "Adapter la fréquence de rafraîchissement et de polling aux besoins réels de l'utilisateur.", correcte: true}
+      - {texte: "Multiplier les micro-services pour découper finement chaque fonctionnalité, quel que soit le besoin."}
+    explication: |
+      1. VRAI : un algorithme et une structure de données adaptés réduisent le temps CPU et la mémoire consommés.
+      2. FAUX : surdimensionner le matériel augmente la consommation et l'empreinte de fabrication, ce qui va à l'opposé de la sobriété.
+      3. VRAI : le code mort, les dépendances et les fonctionnalités inutilisées alourdissent le logiciel, son téléchargement et son exécution sans rien apporter.
+      4. VRAI : un polling trop fréquent multiplie les requêtes réseau et réveille inutilement les terminaux.
+      5. FAUX : chaque micro-service ajoute des conteneurs, des appels réseau et de la sérialisation. Découper sans besoin réel crée une surcharge.
+
+  - id: 42
+    type: multiple
+    enonce: "Nous souhaitons estimer l'empreinte carbone d'un calcul intensif à l'aide du Green Algorithms Calculator (calculator.green-algorithms.org). Quelles affirmations sont exactes ? (2 propositions)"
+    propositions:
+      - {texte: "La localisation géographique du serveur influence directement le résultat, car l'intensité carbone du mix électrique varie selon les pays.", correcte: true}
+      - {texte: "Il est nécessaire de considérer le PUE (Power Usage Effectiveness) qui prend en compte l'efficacité du CPU/GPU"}
+      - {texte: "Il est nécessaire de considérer le PUE (Power Usage Effectiveness) qui prend en compte la quantité d'énergie supplémentaire nécessaire pour opérer le datacentre", correcte: true}
+      - {texte: "Seule la mémoire réellement utilisée par le programme est prise en compte, et non la mémoire allouée."}
+      - {texte: "Le calculateur prend en compte l'empreinte carbone liée à la fabrication du matériel utilisé (embodied carbon)."}
+
+  - id: 43
+    type: multiple
+    image: "images/maths/q43.png"
+    propositions:
+      - {image: "images/maths/q43-a.png", correcte: true}
+      - {image: "images/maths/q43-b.png", correcte: true}
+      - {image: "images/maths/q43-c.png"}
+      - {image: "images/maths/q43-d.png"}
+      - {image: "images/maths/q43-e.png"}
+    explication_image: "images/maths/q43-expl.png"
+
+  - id: 44
+    type: unique
+    image: "images/maths/q44.png"
+    propositions:
+      - {image: "images/maths/q44-a.png"}
+      - {image: "images/maths/q44-b.png", correcte: true}
+      - {image: "images/maths/q44-c.png"}
+      - {image: "images/maths/q44-d.png"}
+      - {image: "images/maths/q44-e.png"}
+    explication_image: "images/maths/q44-expl.png"
+
+  - id: 45
+    type: unique
+    enonce: "Le parchemin commence par « 9153 ». Quel résultat donne le déchiffrement de ce message, chiffré par un décalage de César de clé $K = 4$ (modulo 10) ?"
+    propositions:
+      - {texte: "3597"}
+      - {texte: "5311"}
+      - {texte: "5719", correcte: true}
+      - {texte: "4608"}
+      - {texte: "9153"}
+    explication: |
+      Chaque chiffre est remplacé par (c − 4) mod 10 : 9 → 5, 1 → 7 (car −3 mod 10 = 7), 5 → 1 et 3 → 9 (car −1 mod 10 = 9). On retrouve bien le début de la latitude, 57°19'. Chaque distracteur correspond à une erreur type :
+      • 3597 : le décalage est appliqué dans le mauvais sens (+4).
+      • 5311 : la valeur absolue est utilisée à la place du modulo (|1 − 4| = 3 et |3 − 4| = 1).
+      • 4608 : la clé utilisée est K = 5.
+      • 9153 : aucun déchiffrement n'a été appliqué.

@@ -3,3 +3,5 @@
 qcm:
   - fichier: sciences-numerique-cctl.yml
     titre: "Sciences fondamentales - Sciences du numérique (CCTL)"
+  - fichier: mathematiques-cctl.yml
+    titre: "Sciences fondamentales - Mathématiques (CCTL)"
