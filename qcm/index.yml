@@ -11,3 +11,19 @@ qcm:
     titre: "Sciences du numérique"
     icone: code
     couleur: bleu
+  - fichier: annales-2025-2026-mathematiques-initial.yml
+    titre: "Annales Maths 2025-26 - Initial"
+    icone: calculator
+    couleur: vert
+  - fichier: annales-2025-2026-mathematiques-rattrapage.yml
+    titre: "Annales Maths 2025-26 - Rattrapage"
+    icone: calculator
+    couleur: vert
+  - fichier: annales-2025-2026-numerique-initial.yml
+    titre: "Annales Numérique 2025-26 - Initial"
+    icone: code
+    couleur: orange
+  - fichier: annales-2025-2026-numerique-rattrapage.yml
+    titre: "Annales Numérique 2025-26 - Rattrapage"
+    icone: code
+    couleur: orange

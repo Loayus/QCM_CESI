@@ -1,0 +1,191 @@
+# QCM : Annales 2025-2026 - Sciences du numérique (rattrapage)
+# Source : annales "Sciences de l'Ingénieur 2025-2026" (FISA A3 INFO) - dossier ressources/
+# Aucune copie d'élève dans la source : seules les bonnes réponses sont connues (barème global par défaut).
+# Format : voir sciences-numerique-cctl.yml
+
+titre: "Annales 2025-2026 - Sciences du numérique (rattrapage)"
+note_sur: 20
+
+bareme:
+  unique:
+    0: 1
+  multiple:
+    0: 1
+    1: 0.5
+    2: 0.2
+
+questions:
+  - id: 1
+    type: multiple
+    enonce: "En Python, pour calculer la racine carrée d'un nombre x, quelle fonction du module \"math\" faut-il utiliser ?"
+    propositions:
+      - {texte: "`math.factorial()`"}
+      - {texte: "`math.sqrt()`", correcte: true}
+      - {texte: "`math.lcm()`"}
+      - {texte: "`math.gcd()`"}
+      - {texte: "`math.modf()`"}
+
+  - id: 2
+    type: multiple
+    enonce: "Quel concept de la programmation orientée objet permet à une classe fille de réutiliser et d'adapter les attributs et méthodes d'une classe parente ?"
+    propositions:
+      - {texte: "L'encapsulation"}
+      - {texte: "Le polymorphisme"}
+      - {texte: "L'héritage", correcte: true}
+      - {texte: "L'abstraction"}
+      - {texte: "La surcharge"}
+
+  - id: 3
+    type: multiple
+    enonce: "Quelle commande Linux permet d'afficher en temps réel la liste des processus en cours, avec leur PID, l'utilisation CPU et la mémoire ?"
+    propositions:
+      - {texte: "ps -a"}
+      - {texte: "ls -l"}
+      - {texte: "htop", correcte: true}
+      - {texte: "grep"}
+      - {texte: "chmod"}
+
+  - id: 4
+    type: multiple
+    enonce: "Le concept de mode noyau (kernel mode) et de mode utilisateur (user mode) dans un système d'exploitation sert principalement à quoi ?"
+    propositions:
+      - {texte: "Accélérer l'exécution des programmes utilisateurs"}
+      - {texte: "Gérer la communication entre ordinateurs en réseau"}
+      - {texte: "Protéger le système contre les accès non autorisés aux ressources critiques", correcte: true}
+      - {texte: "Optimiser la consommation énergétique du processeur"}
+      - {texte: "Permettre aux utilisateurs de modifier directement le noyau"}
+
+  - id: 5
+    type: multiple
+    enonce: "Dans un système d'exploitation multitâche, quel est le rôle principal de l'ordonnanceur (scheduler) ?"
+    propositions:
+      - {texte: "Compiler le code source des programmes avant leur exécution"}
+      - {texte: "Gérer la répartition du temps processeur entre les différents processus", correcte: true}
+      - {texte: "Surveiller la température du processeur et ajuster la fréquence"}
+      - {texte: "Déterminer l'ordre d'accès aux fichiers sur le disque"}
+      - {texte: "Gérer les connexions réseau entre les applications"}
+
+  - id: 6
+    type: multiple
+    enonce: "En Python, la fonction `math.factorial(n)` calcule $n!$. Quel est le résultat de `math.factorial(0)` ?"
+    propositions:
+      - {texte: "0"}
+      - {texte: "1", correcte: true}
+      - {texte: "Erreur (`ValueError`)"}
+      - {texte: "`None`"}
+      - {texte: "Infini (`float('inf')`)"}
+
+  - id: 7
+    type: multiple
+    enonce: "En Python, quelle fonction du module `random` permet de générer un nombre flottant aléatoire compris entre 0.0 (inclus) et 1.0 (exclus) ?"
+    propositions:
+      - {texte: "`random.randint(0, 1)`"}
+      - {texte: "`random.uniform(0, 1)` (fonctionne aussi, mais `random()` est spécifique à [0.0, 1.0))"}
+      - {texte: "`random.choice([0.0, 1.0])`"}
+      - {texte: "`random.gauss(0.5, 0.1)`"}
+      - {texte: "`random.random()`", correcte: true}
+
+  - id: 8
+    type: multiple
+    enonce: "Lorsqu'on cherche à estimer la droite de régression linéaire $y = a + bx$ par la méthode des moindres carrés à partir de n couples $(x_i, y_i)$, quelle est l'expression correcte du coefficient $b$ (la pente) ?"
+    propositions:
+      - {texte: "$b = \\dfrac{COV(x,y)}{VAR(x,y)}$", correcte: true}
+      - {texte: "$b = \\dfrac{\\sum (x_i-\\bar{x})(y_i-\\bar{y})}{\\sum (x_i-\\bar{x})^2}$", correcte: true}
+      - {texte: "$b = \\dfrac{\\sum (x_i-\\bar{x})^2}{\\sum (y_i-\\bar{y})^2}$"}
+      - {texte: "$b = \\dfrac{\\sum (y_i-\\bar{y})}{\\sum (x_i-\\bar{x})}$"}
+      - {texte: "$b = \\dfrac{\\sum (x_i y_i)}{\\sum (x_i^2)}$"}
+
+  - id: 9
+    type: unique
+    enonce: "Quel couple associe correctement une fonction du système d'exploitation avec une commande Linux adaptée à son analyse ?"
+    propositions:
+      - {texte: "Gestion du réseau — `ifconfig`", correcte: true}
+      - {texte: "Gestion de la mémoire — `mkdir`"}
+      - {texte: "Gestion du stockage — `ps`"}
+      - {texte: "Gestion des processus — `df`"}
+      - {texte: "Gestion des utilisateurs — `lsusb`"}
+
+  - id: 10
+    type: unique
+    enonce: "Au vu des mesures (pics à 10–11h : 450–500 Mbps, latence 25–30 ms, perte 1,2–2 %, CPU 78–82 °C), quelle action est la plus appropriée pour optimiser le réseau et la sécurité du serveur ?"
+    code: |
+      Heure | Bande passante utilisée (Mbps) | Latence (ms) | Taux de perte (%) | Température CPU (°C)
+      ------+--------------------------------+--------------+-------------------+---------------------
+      9h    | 200                            | 15           | 0,5               | 65
+      10h   | 450                            | 25           | 1,2               | 78
+      11h   | 500                            | 30           | 2,0               | 82
+      12h   | 300                            | 20           | 0,8               | 70
+    propositions:
+      - {texte: "Augmenter la fréquence des redémarrages pour « rafraîchir » le système à 11h"}
+      - {texte: "Désactiver le pare-feu pour réduire la latence"}
+      - {texte: "Réduire la bande passante aux heures creuses pour économiser de l'énergie."}
+      - {texte: "Ignorer la latence et le taux de perte, car seule la température CPU est importante."}
+      - {texte: "Prioriser le trafic critique (QoS) aux heures de pointe et surveiller/rafraîchir le serveur", correcte: true}
+
+  - id: 11
+    type: multiple
+    enonce: "Au vu des consommations (physiques : 500 000 kWh / 250 t ; virtualisés : 120 000 kWh / 60 t ; clim/éclairage : 80 000 kWh / 40 t), quelles actions sont les plus efficaces pour réduire l'empreinte carbone ?"
+    code: |
+      Ressource                   | Consommation annuelle | CO₂ émis annuel
+      ----------------------------+-----------------------+----------------
+      Serveurs physiques (50)     | 500 000 kWh           | 250 t
+      Serveurs virtualisés (20)   | 120 000 kWh           | 60 t
+      Éclairage et climatisation  | 80 000 kWh            | 40 t
+    propositions:
+      - {texte: "Remplacer uniquement l'éclairage par des LED plus efficaces"}
+      - {texte: "Virtualiser davantage de serveurs pour réduire le nombre de machines physiques.", correcte: true}
+      - {texte: "Optimiser le refroidissement et l'éclairage pour diminuer la consommation des systèmes auxiliaires.", correcte: true}
+      - {texte: "Migrer une partie des serveurs vers un cloud alimenté par des énergies renouvelables.", correcte: true}
+      - {texte: "Ignorer la consommation des systèmes auxiliaires et concentrer les efforts uniquement sur le stockage des données."}
+
+  - id: 12
+    type: unique
+    enonce: "On commence le parcours depuis le sommet A. Quel est l'ordre correct des sommets visités si on utilise la méthode DFS ? (voisins explorés par ordre alphabétique)"
+    code: |
+      A -- B -- D
+      |    |
+      C    E
+    propositions:
+      - {texte: "A, B, C, D, E"}
+      - {texte: "A, C, B, E, D"}
+      - {texte: "A, B, D, E, C", correcte: true}
+      - {texte: "A, B, C, E, D"}
+      - {texte: "A, C, B, D, E"}
+    explication: |
+      DFS suit un chemin jusqu'au bout avant de revenir : depuis A → B → D → E → revenir et visiter C → ordre final : A, B, D, E, C.
+
+  - id: 13
+    type: unique
+    enonce: "Quelle représentation Python correspond à une matrice d'adjacence correcte pour le graphe suivant ?"
+    code: |
+      A -- B
+      |
+      C
+    propositions:
+      - {texte: "graph = {\n    \"A\": [\"C\"],\n    \"B\": [\"C\"],\n    \"C\": [\"B\"]\n}", code: true}
+      - {texte: "graph = [\n    [1,1,1],\n    [1,1,1],\n    [1,1,1]\n]", code: true}
+      - {texte: "graph = {\n    \"A\": [\"B\",\"C\"],\n    \"B\": [\"A\"],\n    \"C\": [\"A\"]\n}", code: true}
+      - {texte: "graph = [\n    [0,1,0],\n    [1,0,1],\n    [0,1,0]\n]", code: true}
+      - {texte: "graph = [\n    [0,1,1],\n    [1,0,0],\n    [1,0,0]\n]", code: true, correcte: true}
+    explication: |
+      matrice 3x3 correcte pour A-B, A-C, B-A, C-A.
+
+  - id: 14
+    type: multiple
+    enonce: "Lors d'une expérience visant à mesurer le temps de réponse d'un site web, quelle ressource doit être standardisée ou contrôlée pour garantir la fiabilité des résultats ?"
+    propositions:
+      - {texte: "Le design visuel du site (couleurs, polices)"}
+      - {texte: "Le navigateur web utilisé et sa version", correcte: true}
+      - {texte: "Le nombre de pages visitées par l'utilisateur"}
+      - {texte: "L'adresse IP publique du serveur"}
+      - {texte: "Le contenu textuel des pages"}
+
+  - id: 15
+    type: multiple
+    enonce: "Pour stocker une collection d'éléments uniques, sans importance de l'ordre, et permettre une vérification rapide de la présence d'un élément, quelle structure Python est la plus appropriée ?"
+    propositions:
+      - {texte: "list"}
+      - {texte: "tuple"}
+      - {texte: "set", correcte: true}
+      - {texte: "dict"}
+      - {texte: "array"}

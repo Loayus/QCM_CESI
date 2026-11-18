@@ -1,0 +1,226 @@
+# QCM : Annales 2025-2026 - Mathématiques (initial)
+# Source : annales "Sciences de l'Ingénieur 2025-2026" (FISA A3 INFO) - dossier ressources/
+# Aucune copie d'élève dans la source : seules les bonnes réponses sont connues (barème global par défaut).
+# Format : voir sciences-numerique-cctl.yml
+
+titre: "Annales 2025-2026 - Mathématiques (initial)"
+note_sur: 20
+
+bareme:
+  unique:
+    0: 1
+  multiple:
+    0: 1
+    1: 0.5
+    2: 0.2
+
+questions:
+  - id: 1
+    type: multiple
+    enonce: "Dans un tournoi, la probabilité de tirer une carte gagnante est de 2/5. Quelle est la probabilité de tirer une carte perdante (aucun match nul possible) ?"
+    propositions:
+      - {texte: "1/5"}
+      - {texte: "2/5"}
+      - {texte: "3/5", correcte: true}
+      - {texte: "4/5"}
+      - {texte: "1"}
+
+  - id: 2
+    type: multiple
+    enonce: "Lors d'un tir au but unique au football, l'issue est but ou pas but. Quelle loi de distribution est la plus simple pour modéliser ce résultat ?"
+    propositions:
+      - {texte: "Loi de Poisson"}
+      - {texte: "Loi de Bernoulli", correcte: true}
+      - {texte: "Loi Normale"}
+      - {texte: "Loi Uniforme continue"}
+      - {texte: "Loi Exponentielle"}
+
+  - id: 3
+    type: multiple
+    enonce: "Deux entreprises choisissent simultanément un prix. Quand peut-on dire que le couple de stratégies $(p_1, p_2)$ forme un équilibre de Nash ?"
+    propositions:
+      - {texte: "Quand le profit total (somme des deux) est maximal"}
+      - {texte: "Quand aucune entreprise ne peut augmenter son profit en changeant seule son prix", correcte: true}
+      - {texte: "Quand les deux prix sont identiques"}
+      - {texte: "Quand chacune minimise le profit de l'autre"}
+      - {texte: "Quand les entreprises se sont coordonées par accord préalable"}
+
+  - id: 4
+    type: multiple
+    enonce: "Comment appelle-t-on un jeu où les joueurs agissent à tour de rôle, plutôt que simultanément ?"
+    propositions:
+      - {texte: "Jeu statique"}
+      - {texte: "Jeu à somme nulle"}
+      - {texte: "Jeu séquentiel (ou dynamique)", correcte: true}
+      - {texte: "Jeu coopératif"}
+      - {texte: "Jeu symétrique"}
+
+  - id: 5
+    type: multiple
+    enonce: "Dans un jeu à somme nulle, comment appelle-t-on une stratégie qui assure à un joueur un gain d'au moins X, quels que soient les choix de l'adversaire ?"
+    propositions:
+      - {texte: "Coopérative"}
+      - {texte: "Aléatoire"}
+      - {texte: "Maximin (pour le joueur qui maximise son minimum)", correcte: true}
+      - {texte: "Dominée"}
+      - {texte: "Incomplète"}
+
+  - id: 6
+    type: multiple
+    enonce: "Quelle statistique indique la valeur qui, dans des données triées, coupe l'échantillon en deux parts égales ?"
+    propositions:
+      - {texte: "La moyenne"}
+      - {texte: "La médiane", correcte: true}
+      - {texte: "Le mode"}
+      - {texte: "L'écart-type"}
+      - {texte: "La variance"}
+
+  - id: 7
+    type: multiple
+    enonce: "Quel type de graphique est le plus adapté pour visualiser la relation entre deux variables quantitatives ?"
+    propositions:
+      - {texte: "Histogramme"}
+      - {texte: "Diagramme en barres"}
+      - {texte: "Nuage de points (diagramme de dispersion)", correcte: true}
+      - {texte: "Diagramme circulaire"}
+      - {texte: "Boîte à moustaches (Box plot)"}
+
+  - id: 8
+    type: multiple
+    enonce: "Pour un objet de valeur réelle 5.0 cm, on mesure 5.2 cm. Quelle erreur absolue obtient-on ?"
+    propositions:
+      - {texte: "5.2 cm"}
+      - {texte: "5.0 cm"}
+      - {texte: "0.2 cm", correcte: true}
+      - {texte: "10.2 cm"}
+      - {texte: "2%"}
+
+  - id: 9
+    type: multiple
+    enonce: "Selon le critère du Z-score, une observation devient anormale si la valeur absolue de son Z-score dépasse un seuil. Lequel ?"
+    propositions:
+      - {texte: "Proche de 0."}
+      - {texte: "Égal à 1."}
+      - {texte: "Inférieur à 1."}
+      - {texte: "Très élevé (par exemple, > 3) ou très bas (par exemple, < -3) en valeur absolue.", correcte: true}
+      - {texte: "Positif."}
+
+  - id: 10
+    type: multiple
+    enonce: "Parmi les propositions suivantes, laquelle décrit justement la notation $O(f(n))$ ?"
+    propositions:
+      - {texte: "Elle décrit la borne inférieure du temps d'exécution d'un algorithme."}
+      - {texte: "Elle décrit le temps d'exécution exact d'un algorithme."}
+      - {texte: "Elle décrit la borne supérieure du temps d'exécution d'un algorithme.", correcte: true}
+      - {texte: "Il augmente de manière logarithmique."}
+      - {texte: "Elle décrit le temps d'exécution moyen d'un algorithme."}
+
+  - id: 11
+    type: multiple
+    enonce: "Quelle est la complexité en temps de cet extrait Python qui parcourt toutes les paires d'indices $(i,j)$ avec $j>i$ ?"
+    code: |
+      for i in range(len(arr) - 1):
+          for j in range(i + 1, len(arr)):
+              print(arr[i] * arr[j])
+    propositions:
+      - {texte: "$O(n)$"}
+      - {texte: "$O(n^2)$", correcte: true}
+      - {texte: "$O(n.m)$"}
+      - {texte: "$O(n^3)$"}
+
+  - id: 12
+    type: multiple
+    enonce: "Face à un écart marqué entre la prédiction X du modèle et l'observation Y, quelle première vérification effectuer ?"
+    propositions:
+      - {texte: "Conclure immédiatement que le modèle est faux."}
+      - {texte: "Conclure immédiatement que l'expérience est erronée."}
+      - {texte: "Vérifier les hypothèses du modèle et les conditions de l'expérience pour identifier les sources possibles de divergence.", correcte: true}
+      - {texte: "Modifier les données expérimentales pour qu'elles correspondent au modèle."}
+      - {texte: "Publier uniquement le résultat théorique."}
+
+  - id: 13
+    type: multiple
+    enonce: "À quoi sert principalement l'algorithme d'Euclide (et sa version étendue) en RSA ?"
+    propositions:
+      - {texte: "À générer de grands nombres premiers."}
+      - {texte: "À calculer le plus grand commun diviseur (PGCD) de deux nombres, étape clé pour vérifier des conditions ou calculer des inverses modulaires.", correcte: true}
+      - {texte: "À chiffrer directement des messages longs."}
+      - {texte: "À compresser les données avant chiffrement."}
+      - {texte: "À tester la robustesse d'une clé de chiffrement."}
+
+  - id: 14
+    type: multiple
+    enonce: "Les nombres premiers de Mersenne sont des nombres premiers de la forme $2^p - 1$. Quelle condition doit satisfaire $p$ pour que $2^p - 1$ puisse être premier ?"
+    propositions:
+      - {texte: "$p$ doit être un nombre pair."}
+      - {texte: "$p$ doit lui-même être un nombre premier.", correcte: true}
+      - {texte: "$p$ doit être un nombre de Fermat."}
+      - {texte: "$p$ doit être une puissance de 2."}
+      - {texte: "$p$ peut être n'importe quel entier positif."}
+
+  - id: 15
+    type: multiple
+    enonce: "Vous devez déchiffrer un message chiffré par César sans connaître le décalage. Quelle technique d'analyse privilégier ?"
+    propositions:
+      - {texte: "Analyse différentielle."}
+      - {texte: "Analyse fréquentielle des lettres du message chiffré.", correcte: true}
+      - {texte: "Attaque par force brute sur toutes les clés RSA possibles."}
+      - {texte: "Utilisation de l'algorithme d'Euclide étendu."}
+      - {texte: "Comparaison avec un dictionnaire de mots de passe courants."}
+
+  - id: 16
+    type: multiple
+    enonce: "Quel objet mathématique utilise-t-on le plus souvent pour représenter un réseau social (personnes = nœuds, amitiés = liens) ?"
+    propositions:
+      - {texte: "Une série temporelle."}
+      - {texte: "Une matrice de transition."}
+      - {texte: "Un graphe (souvent non orienté).", correcte: true}
+      - {texte: "Un automate fini."}
+      - {texte: "Une équation différentielle."}
+
+  - id: 17
+    type: multiple
+    enonce: "Pour modéliser des contraintes de précédence (A doit finir avant que B commence), quelle structure choisir ?"
+    propositions:
+      - {texte: "Un graphe complet."}
+      - {texte: "Un graphe orienté acyclique (DAG).", correcte: true}
+      - {texte: "Un arbre binaire."}
+      - {texte: "Un cycle hamiltonien."}
+      - {texte: "Une liste simplement chaînée."}
+
+  - id: 18
+    type: multiple
+    enonce: "Un data center fournit les données suivantes. En s'appuyant sur ces chiffres, ordonnez par priorité les stratégies Green IT afin de diviser par deux consommation et émissions."
+    code: |
+      Stratégie Green IT            | Consommation annuelle (kWh) | CO₂ émis annuel (t)
+      ------------------------------+-----------------------------+--------------------
+      Serveurs physiques (50)       | 500 000                     | 250
+      Serveurs virtualisés (20)     | 120 000                     | 60
+      Optimisation refroidissement  | 80 000                      | 40
+      Migration vers cloud renouv.  | 0                           | 0
+    propositions:
+      - {texte: "Virtualiser davantage de serveurs et optimiser le refroidissement.", correcte: true}
+      - {texte: "Maintenir uniquement les serveurs physiques sans modification."}
+      - {texte: "Ignorer la consommation et migrer tout vers des serveurs très puissants."}
+      - {texte: "Migrer une partie des serveurs vers un cloud alimenté par énergies renouvelables.", correcte: true}
+      - {texte: "Augmenter la puissance des serveurs virtualisés pour traiter plus de données, sans se soucier de l'énergie."}
+
+  - id: 19
+    type: multiple
+    enonce: "Que désigne le seuil de signification alpha ($\\alpha$) dans un test d'hypothèse ?"
+    propositions:
+      - {texte: "La probabilité que l'hypothèse nulle soit vraie."}
+      - {texte: "La probabilité maximale de commettre une erreur de type I (rejeter $H_0$ à tort) que l'on est prêt à accepter.", correcte: true}
+      - {texte: "La p-valeur du test."}
+      - {texte: "La puissance du test."}
+      - {texte: "La taille de l'échantillon."}
+
+  - id: 20
+    type: multiple
+    enonce: "En quoi l'erreur absolue se distingue-t-elle de l'erreur relative ?"
+    propositions:
+      - {texte: "L'erreur absolue est toujours plus grande que l'erreur relative."}
+      - {texte: "L'erreur relative ne s'applique qu'aux mesures de pourcentage."}
+      - {texte: "L'erreur absolue est sans unité, l'erreur relative a l'unité de la mesure."}
+      - {texte: "Il n'y a pas de différence significative."}
+      - {texte: "L'erreur absolue est la différence entre la valeur mesurée et la valeur réelle, tandis que l'erreur relative exprime cette différence en proportion de la valeur réelle (souvent en pourcentage).", correcte: true}

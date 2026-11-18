@@ -1,0 +1,178 @@
+# QCM : Annales 2025-2026 - Mathématiques (rattrapage)
+# Source : annales "Sciences de l'Ingénieur 2025-2026" (FISA A3 INFO) - dossier ressources/
+# Aucune copie d'élève dans la source : seules les bonnes réponses sont connues (barème global par défaut).
+# Format : voir sciences-numerique-cctl.yml
+
+titre: "Annales 2025-2026 - Mathématiques (rattrapage)"
+note_sur: 20
+
+bareme:
+  unique:
+    0: 1
+  multiple:
+    0: 1
+    1: 0.5
+    2: 0.2
+
+questions:
+  - id: 1
+    type: multiple
+    enonce: "Lorsqu'on lance un dé à six faces équilibré, quelle est la probabilité d'obtenir un nombre supérieur à 4 ?"
+    propositions:
+      - {texte: "1/6"}
+      - {texte: "1/3", correcte: true}
+      - {texte: "1/2"}
+      - {texte: "2/3"}
+      - {texte: "5/6"}
+
+  - id: 2
+    type: multiple
+    enonce: "On répète 10 fois le lancer d'un dé équilibré à six faces. Le nombre de fois où l'on obtient un 6 suit quelle loi de probabilité ?"
+    propositions:
+      - {texte: "Loi de Poisson"}
+      - {texte: "Loi Binomiale", correcte: true}
+      - {texte: "Loi Géométrique"}
+      - {texte: "Loi Normale"}
+      - {texte: "Loi Uniforme discrète"}
+
+  - id: 3
+    type: multiple
+    enonce: "Si l'écart-type d'un ensemble de données est nul, que peut-on en déduire ?"
+    propositions:
+      - {texte: "Les données sont très dispersées"}
+      - {texte: "Les données suivent une loi normale"}
+      - {texte: "Toutes les données ont la même valeur", correcte: true}
+      - {texte: "La moyenne est égale à zéro."}
+      - {texte: "Les données contiennent des valeurs extrêmes"}
+
+  - id: 4
+    type: multiple
+    enonce: "Dans un test d'hypothèse, que représente le risque $\\alpha$ (alpha) ?"
+    propositions:
+      - {texte: "La probabilité d'accepter une hypothèse fausse"}
+      - {texte: "La probabilité de rejeter l'hypothèse nulle alors qu'elle est vraie", correcte: true}
+      - {texte: "La probabilité de ne pas rejeter une hypothèse fausse"}
+      - {texte: "La puissance du test"}
+      - {texte: "La moyenne de l'échantillon observé"}
+
+  - id: 5
+    type: multiple
+    enonce: "Dans une enquête, 25 % des répondants déclarent pratiquer un sport régulièrement. Cela signifie que :"
+    propositions:
+      - {texte: "25 % des personnes interrogées ne pratiquent aucun sport"}
+      - {texte: "25 % des sportifs ont répondu à l'enquête"}
+      - {texte: "25 % de la population totale pratique un sport"}
+      - {texte: "Les 75 % restants ne font jamais d'activité physique"}
+      - {texte: "Un quart des répondants pratiquent un sport de façon régulière", correcte: true}
+
+  - id: 6
+    type: unique
+    enonce: "Voici un algorithme Python :"
+    code: |
+      def myster(arr):
+          n = len(arr)
+          found = False
+          arr.sort()
+          for i in range(n - 1):
+              if arr[i] == arr[i + 1]:
+                  found = True
+          return found
+    propositions:
+      - {texte: "Compter le nombre de doublons ; $O(n)$"}
+      - {texte: "Déterminer s'il existe au moins un doublon, $O(n \\log n)$", correcte: true}
+      - {texte: "Vérifier si le tableau est déjà trié, $O(n \\log n)$"}
+      - {texte: "Trouver la valeur maximale, $O(n)$"}
+      - {texte: "Trier puis supprimer les doublons, $O(n)$"}
+
+  - id: 7
+    type: multiple
+    enonce: "Quel concept fondamental de la cryptographie asymétrique repose sur la difficulté de factoriser un grand nombre en ses facteurs premiers ?"
+    propositions:
+      - {texte: "Le chiffrement symétrique DES"}
+      - {texte: "Le chiffrement par décalage"}
+      - {texte: "Le protocole de hachage MD5"}
+      - {texte: "Le protocole RSA", correcte: true}
+      - {texte: "Le chiffrement affine"}
+
+  - id: 8
+    type: multiple
+    enonce: "Si un modèle théorique ne correspond pas aux données expérimentales fiables, que peut-on en déduire ?"
+    propositions:
+      - {texte: "Les mesures sont fausses"}
+      - {texte: "Le hasard explique les écarts"}
+      - {texte: "Le modèle doit être ajusté", correcte: true}
+      - {texte: "Les données sont biaisées"}
+      - {texte: "Le phénomène est aléatoire"}
+
+  - id: 9
+    type: multiple
+    enonce: "Dans un équilibre de Nash, que se passe-t-il si un seul joueur modifie sa stratégie ?"
+    propositions:
+      - {texte: "Il augmente forcément son gain"}
+      - {texte: "Il perd automatiquement la partie"}
+      - {texte: "Les autres joueurs changent aussi de stratégie"}
+      - {texte: "Son gain ne peut pas être amélioré", correcte: true}
+      - {texte: "Le jeu devient coopératif"}
+
+  - id: 10
+    type: multiple
+    enonce: "Si la moyenne des notes est de 60 et l'écart-type est de 20, que peut-on dire de la répartition des résultats ?"
+    propositions:
+      - {texte: "Les notes sont très homogènes"}
+      - {texte: "Les notes sont fortement dispersées", correcte: true}
+      - {texte: "La plupart des étudiants ont eu 60"}
+      - {texte: "Toutes les notes sont comprises entre 50 et 70"}
+      - {texte: "L'évaluation était parfaitement équilibrée"}
+
+  - id: 11
+    type: unique
+    enonce: "Quelle affirmation illustre le mieux une stratégie Green IT basée sur l'efficacité algorithmique selon le tableau ci-dessous ?"
+    code: |
+      Algorithme | Complexité   | Consommation énergétique estimée
+      -----------+--------------+---------------------------------
+      A          | O(n²)        | Élevée
+      B          | O(n log n)   | Moyenne
+      C          | O(n)         | Faible
+    propositions:
+      - {texte: "L'algorithme A est préférable car la complexité n'a pas d'impact sur l'énergie consommée."}
+      - {texte: "L'algorithme B est moins écologique que A car $O(n \\log n)$ est supérieur à $O(n^2)$."}
+      - {texte: "Utiliser l'algorithme C pour réduire la consommation d'énergie, car il est le plus efficace.", correcte: true}
+      - {texte: "La consommation énergétique dépend uniquement du matériel, pas de l'algorithme."}
+      - {texte: "Tous les algorithmes ont la même empreinte carbone car la tâche est identique."}
+
+  - id: 12
+    type: multiple
+    enonce: "Quelle loi de probabilité est la plus simple pour modéliser le résultat d'un unique lancer d'une pièce de monnaie équilibrée (Pile ou Face) ?"
+    propositions:
+      - {texte: "Loi de Poisson"}
+      - {texte: "Loi binomiale"}
+      - {texte: "Loi Normale"}
+      - {texte: "Loi Uniforme discrète", correcte: true}
+      - {texte: "Loi Exponentielle"}
+
+  - id: 13
+    type: multiple
+    enonce: "Laquelle des affirmations suivantes est vraie à propos de la notation grand O en analyse de complexité algorithmique ?"
+    propositions:
+      - {texte: "Elle décrit la borne inférieure du temps d'exécution d'un algorithme."}
+      - {texte: "Elle décrit le temps d'exécution exact d'un algorithme."}
+      - {texte: "Elle décrit la borne supérieure du temps d'exécution d'un algorithme.", correcte: true}
+      - {texte: "Il augmente de manière logarithmique."}
+      - {texte: "Elle décrit le temps d'exécution moyen d'un algorithme."}
+
+  - id: 14
+    type: multiple
+    enonce: "On vise -50 % de consommation énergétique et de CO₂. D'après le tableau ci-dessous, quelles bonnes pratiques faut-il prioriser ?"
+    code: |
+      Stratégie Green IT            | Consommation annuelle (kWh) | CO₂ émis annuel (t)
+      ------------------------------+-----------------------------+--------------------
+      Serveurs physiques (50)       | 500 000                     | 250
+      Serveurs virtualisés (20)     | 120 000                     | 60
+      Optimisation refroidissement  | 80 000                      | 40
+      Migration vers cloud renouv.  | 0                           | 0
+    propositions:
+      - {texte: "Virtualiser et compléter par l'optimisation du refroidissement", correcte: true}
+      - {texte: "Prioriser la migration vers un cloud à énergie renouvelable", correcte: true}
+      - {texte: "Ignorer la consommation et migrer tout vers des serveurs très puissants."}
+      - {texte: "Se limiter à des optimisations logicielles, sans toucher à l'infrastructure"}
+      - {texte: "Remplacer les 50 serveurs physiques par plus de serveurs physiques récents"}

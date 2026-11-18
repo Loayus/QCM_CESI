@@ -1,0 +1,175 @@
+# QCM : Annales 2025-2026 - Sciences du numérique (initial)
+# Source : annales "Sciences de l'Ingénieur 2025-2026" (FISA A3 INFO) - dossier ressources/
+# Aucune copie d'élève dans la source : seules les bonnes réponses sont connues (barème global par défaut).
+# Format : voir sciences-numerique-cctl.yml
+
+titre: "Annales 2025-2026 - Sciences du numérique (initial)"
+note_sur: 20
+
+bareme:
+  unique:
+    0: 1
+  multiple:
+    0: 1
+    1: 0.5
+    2: 0.2
+
+questions:
+  - id: 1
+    type: multiple
+    enonce: "En Python, comment gérer le cas $n=0$ dans une fonction factorielle, sachant que $0!=1$ ?"
+    propositions:
+      - {texte: "Une fonction qui retourne 0."}
+      - {texte: "Une fonction qui multiplie les nombres de 1 à n−1."}
+      - {texte: "Une fonction qui retourne 1 si n=0, et n×(n−1)! si n>0 (approche récursive ou itérative équivalente).", correcte: true}
+      - {texte: "Utiliser la fonction `math.log(n)`."}
+      - {texte: "Lever une exception car la factorielle n'est pas définie pour 0."}
+
+  - id: 2
+    type: multiple
+    enonce: "Quel paradigme privilégie les fonctions de première classe, l'immutabilité des données et l'évitement des effets de bord ?"
+    propositions:
+      - {texte: "Programmation impérative."}
+      - {texte: "Programmation orientée objet."}
+      - {texte: "Programmation fonctionnelle.", correcte: true}
+      - {texte: "Programmation procédurale."}
+      - {texte: "Programmation logique."}
+
+  - id: 3
+    type: multiple
+    enonce: "Vous devez tester souvent si un mot de passe figure dans une grande liste compromise (l'ordre n'importe pas). Quelle structure de données garantit une recherche rapide en moyenne ?"
+    propositions:
+      - {texte: "Une liste chaînée simple"}
+      - {texte: "Un tableau trié"}
+      - {texte: "Une table de hachage", correcte: true}
+      - {texte: "Une file de priorité"}
+      - {texte: "Une pile"}
+
+  - id: 4
+    type: multiple
+    enonce: "Quelle est la fonction essentielle d'un driver au sein d'un OS ?"
+    propositions:
+      - {texte: "Optimiser la vitesse de calcul du processeur."}
+      - {texte: "Permettre au système d'exploitation de communiquer avec et de contrôler un composant matériel spécifique.", correcte: true}
+      - {texte: "Gérer l'interface graphique pour l'utilisateur."}
+      - {texte: "Stocker les fichiers système importants."}
+      - {texte: "Assurer la sécurité du réseau."}
+
+  - id: 5
+    type: multiple
+    enonce: "Comment définit-on la fragmentation interne en gestion de mémoire ?"
+    propositions:
+      - {texte: "L'espace total de mémoire libre est suffisant pour une allocation, mais il est divisé en petits blocs non contigus."}
+      - {texte: "L'espace perdu à l'intérieur d'un bloc de mémoire alloué parce que le bloc est plus grand que la taille réellement nécessaire.", correcte: true}
+      - {texte: "La mémoire vive est complètement remplie."}
+      - {texte: "Les données d'un fichier sont dispersées sur plusieurs secteurs du disque."}
+      - {texte: "La table des pages du noyau est trop grande."}
+
+  - id: 6
+    type: multiple
+    enonce: "Dans une liste triée `ma_liste`, quelle stratégie de recherche permet de tester la présence de x plus vite qu'un parcours séquentiel sur de grandes tailles ?"
+    propositions:
+      - {texte: "Parcourir la liste avec une boucle `while`."}
+      - {texte: "La recherche dichotomique (binaire).", correcte: true}
+      - {texte: "Utiliser `ma_liste.find(x)`."}
+      - {texte: "Convertir la liste en ensemble puis chercher."}
+      - {texte: "Mélanger la liste puis chercher."}
+
+  - id: 7
+    type: multiple
+    enonce: "Pour éviter une boucle, quelle expression mathématique donne immédiatement la somme des N premiers entiers ?"
+    propositions:
+      - {texte: "N * N"}
+      - {texte: "Une utilisation de for additionnant chaque nombre."}
+      - {texte: "N * (N+1) / 2", correcte: true}
+      - {texte: "N + (N-1) + (N-2)"}
+      - {texte: "pow(N, N+1)"}
+
+  - id: 8
+    type: unique
+    enonce: "On dispose d'un nuage de points représentant la relation entre deux variables quantitatives. Quelle condition d'optimalité caractérise la droite de régression issue des moindres carrés sur ce nuage de points ?"
+    propositions:
+      - {texte: "Minimiser la somme des valeurs absolues des résidus"}
+      - {texte: "Minimiser la somme des carrés des résidus", correcte: true}
+      - {texte: "Maximiser le coefficient de corrélation linéaire"}
+      - {texte: "Minimiser la variance de la variable explicative"}
+      - {texte: "Maximiser la moyenne des résidus"}
+
+  - id: 9
+    type: unique
+    enonce: "Comment compléter ce script pour afficher les valeurs de data sous forme d'histogramme avec Matplotlib ?"
+    code: |
+      import matplotlib.pyplot as plt
+      data = [2, 3, 3, 4, 4, 4, 5, 6]
+    propositions:
+      - {texte: "plt.plot.hist(data)"}
+      - {texte: "plt.line(data)"}
+      - {texte: "plt.hist(data)", correcte: true}
+      - {texte: "plt.bar(data)"}
+      - {texte: "plt.scatter(data)"}
+
+  - id: 10
+    type: unique
+    enonce: "Laquelle des propositions associe correctement une fonction clé d'un OS à l'outil d'analyse approprié ?"
+    propositions:
+      - {texte: "L'OS gère l'accès concurrent aux ressources matérielles ; l'outil Gestionnaire des tâches (Windows) permet d'observer l'utilisation du processeur et de la mémoire.", correcte: true}
+      - {texte: "L'OS fournit uniquement une interface graphique pour l'utilisateur ; l'outil Wireshark permet de surveiller la consommation de RAM."}
+      - {texte: "L'OS se limite à lancer des applications ; l'outil top (Linux) sert à modifier le code source des programmes en cours d'exécution."}
+      - {texte: "L'OS exécute directement toutes les instructions matérielles sans médiation ; l'outil perf (Linux) est un antivirus intégré."}
+      - {texte: "L'OS gère uniquement le réseau ; l'outil Process Explorer sert exclusivement à tracer les requêtes HTTP."}
+
+  - id: 11
+    type: unique
+    enonce: "Pour évaluer un serveur web sous charge, quelle méthodologie suit-on pour identifier les ressources, mener l'expérience et collecter les mesures ?"
+    propositions:
+      - {texte: "Lire uniquement la documentation du serveur sans exécuter de tests."}
+      - {texte: "Utiliser un générateur de charge comme Apache JMeter ou ab (ApacheBench) pour simuler des requêtes, puis collecter les temps de réponse et le taux d'erreur.", correcte: true}
+      - {texte: "Installer un antivirus sur le serveur et relever le nombre de fichiers analysés."}
+      - {texte: "Exécuter une commande ls répétée en boucle et compter le nombre de lignes affichées."}
+      - {texte: "Consulter les journaux système sans lancer aucune expérimentation et conclure à la robustesse du serveur."}
+
+  - id: 12
+    type: unique
+    enonce: "Quel est l'objectif principal du Green IT (informatique écoresponsable) ?"
+    propositions:
+      - {texte: "Réduire la consommation énergétique des systèmes informatiques et limiter leur impact environnemental.", correcte: true}
+      - {texte: "Accélérer les processeurs pour améliorer les performances, même si cela augmente la consommation énergétique."}
+      - {texte: "Installer exclusivement des serveurs très puissants sans se soucier de leur efficacité énergétique."}
+      - {texte: "Remplacer tous les logiciels propriétaires par des logiciels open source."}
+      - {texte: "Stocker toutes les données sur des serveurs distants sans optimiser la consommation locale."}
+
+  - id: 13
+    type: multiple
+    enonce: "Lesquelles des options ci-dessous correspondent à de véritables pratiques de Green IT ?"
+    propositions:
+      - {texte: "Virtualiser les serveurs pour réduire le nombre de machines physiques et optimiser leur utilisation.", correcte: true}
+      - {texte: "Mettre en veille ou éteindre les ordinateurs inactifs pour réduire la consommation énergétique.", correcte: true}
+      - {texte: "Stocker toutes les données sur des serveurs haute performance, même s'ils restent sous-utilisés."}
+      - {texte: "Choisir des centres de données utilisant des énergies renouvelables et des systèmes de refroidissement efficaces.", correcte: true}
+      - {texte: "Installer des logiciels uniquement pour améliorer la vitesse des applications, sans se préoccuper de la consommation énergétique."}
+
+  - id: 14
+    type: unique
+    enonce: "Pour parcourir un graphe en Python en largeur (BFS) puis en profondeur (DFS), quelle option est juste ?"
+    propositions:
+      - {texte: "BFS et DFS explorent les sommets dans le même ordre, donc le choix de l'algorithme n'a aucune importance."}
+      - {texte: "DFS explore toujours les voisins les plus éloignés en priorité, BFS explore les sommets dans l'ordre inverse de l'insertion dans le graphe."}
+      - {texte: "BFS est uniquement applicable aux graphes orientés, DFS uniquement aux graphes non orientés."}
+      - {texte: "BFS utilise une pile (stack) pour gérer les sommets à explorer, DFS utilise une file (queue)."}
+      - {texte: "BFS explore les voisins d'un sommet avant de descendre plus profondément, DFS explore d'abord un chemin jusqu'à la fin avant de revenir en arrière.", correcte: true}
+
+  - id: 15
+    type: unique
+    enonce: "On considère le graphe suivant (voisins explorés par ordre alphabétique). En partant de A, quel est l'ordre de visite en BFS ?"
+    code: |
+      A -- B -- D
+      |    |
+      C    E
+    propositions:
+      - {texte: "A, B, C, D, E", correcte: true}
+      - {texte: "A, C, B, E, D"}
+      - {texte: "A, B, D, E, C"}
+      - {texte: "A, B, C, E, D"}
+      - {texte: "A, C, B, D, E"}
+    explication: |
+      BFS explore couche par couche : depuis A → voisins B et C → ensuite D et E (voisins de B) → ordre final : A, B, C, D, E.
