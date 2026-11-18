@@ -1,0 +1,412 @@
+# QCM : Sciences fondamentales - Sciences du numérique (CCTL)
+# Source : correction de l'examen du 15/11/2026 (dossier ressources/)
+#
+# Format d'une question :
+#   type: unique | multiple   -> radio (1 seule case) | cases à cocher
+#   enonce:                   -> texte ; `code` en backticks, formules en $...$ (LaTeX)
+#   code: |                   -> (optionnel) bloc de code / tableau / schéma affiché sous l'énoncé
+#   propositions:             -> liste ordonnée A, B, C... ; correcte: true sur les bonnes réponses
+#   explication:              -> (optionnel) commentaire affiché dans la correction
+
+titre: "Sciences fondamentales - Sciences du numérique (CCTL)"
+note_sur: 20
+
+# Barème déduit de la copie corrigée.
+# Clé = nombre de discordances (case cochée à tort OU bonne case non cochée).
+# Au-delà de la dernière clé listée : 0 point. Aucune réponse : 0 point.
+bareme:
+  unique:
+    0: 1
+  multiple:
+    0: 1
+    1: 0.5
+    2: 0.2
+
+questions:
+  - id: 1
+    type: multiple
+    enonce: "Quel paradigme de programmation met l'accent sur l'utilisation de fonctions comme des entités de première classe, l'immuabilité des données et l'évitement des effets de bord ?"
+    propositions:
+      - {texte: "Programmation impérative."}
+      - {texte: "Programmation orientée objet."}
+      - {texte: "Programmation fonctionnelle.", correcte: true}
+      - {texte: "Programmation procédurale."}
+      - {texte: "Programmation logique."}
+
+  - id: 2
+    type: multiple
+    enonce: "L'encapsulation, l'héritage et le polymorphisme sont des concepts clés de quel paradigme de programmation ?"
+    propositions:
+      - {texte: "Programmation structurée."}
+      - {texte: "Programmation orientée objet", correcte: true}
+      - {texte: "Programmation fonctionnelle."}
+      - {texte: "Programmation déclarative."}
+      - {texte: "Programmation par contraintes."}
+
+  - id: 3
+    type: multiple
+    enonce: "Quel est le rôle principal d'un \"pilote de périphérique\" (driver) dans un système d'exploitation ?"
+    propositions:
+      - {texte: "Optimiser la vitesse de calcul du processeur."}
+      - {texte: "Permettre au système d'exploitation de communiquer avec et de contrôler un composant matériel spécifique.", correcte: true}
+      - {texte: "Gérer l'interface graphique pour l'utilisateur."}
+      - {texte: "Stocker les fichiers système importants."}
+      - {texte: "Assurer la sécurité du réseau."}
+
+  - id: 4
+    type: multiple
+    enonce: "Dans un système d'exploitation multitâche, l'ordonnanceur (scheduler) est responsable de :"
+    propositions:
+      - {texte: "Sélectionner le prochain processus à exécuter sur le CPU parmi la liste des processus prêts.", correcte: true}
+      - {texte: "Allouer l'espace disque pour les nouveaux fichiers."}
+      - {texte: "Gérer les connexions réseau entrantes et sortantes."}
+      - {texte: "Vérifier les erreurs dans le code des applications."}
+      - {texte: "Charger les pilotes de périphériques au démarrage."}
+
+  - id: 5
+    type: multiple
+    enonce: "En Python, la fonction `math.factorial(n)` calcule $n!$. Quel est le résultat de `math.factorial(0)` ?"
+    propositions:
+      - {texte: "0"}
+      - {texte: "-1"}
+      - {texte: "Une erreur"}
+      - {texte: "1", correcte: true}
+      - {texte: "Non défini"}
+    explication: "Par convention, $0! = 1$ ; `math.factorial(0)` renvoie donc 1."
+
+  - id: 6
+    type: multiple
+    enonce: "On cherche à estimer la droite de régression linéaire ($y = a + bx$) par la méthode des moindres carrés à partir de n couples $(x_i, y_i)$. Quelle est l'expression correcte du coefficient (b) (la pente) ?"
+    propositions:
+      - {image: "images/q06-a.png", correcte: true}
+      - {image: "images/q06-b.png", correcte: true}
+      - {image: "images/q06-c.png"}
+      - {image: "images/q06-d.png"}
+      - {image: "images/q06-e.png"}
+
+  - id: 7
+    type: unique
+    enonce: "Voici un programme python. Comment le compléter pour représenter les données sous forme d'histogramme ?"
+    code: |
+      import matplotlib.pyplot as plt
+      data = [2, 3, 3, 4, 4, 4, 5, 6]
+    propositions:
+      - {texte: "plt.plot.hist(data)"}
+      - {texte: "plt.line(data)"}
+      - {texte: "plt.hist(data)", correcte: true}
+      - {texte: "plt.bar(data)"}
+      - {texte: "plt.scatter(data)"}
+
+  - id: 8
+    type: unique
+    enonce: "Parmi les propositions suivantes, laquelle décrit correctement un rôle du système d'exploitation et l'outil d'analyse associé ?"
+    propositions:
+      - {texte: "L'OS planifie l'exécution des processus ; la commande top (Linux) permet de visualiser en temps réel leur consommation CPU.", correcte: true}
+      - {texte: "L'OS compile le code source des applications ; l'outil Task Manager (Windows) est un compilateur intégré."}
+      - {texte: "L'OS fournit uniquement une interface graphique ; l'outil strace (Linux) sert à mesurer la consommation de mémoire en pourcentage."}
+      - {texte: "L'OS exécute directement les programmes sans isolation ; l'outil dstat permet de désinstaller automatiquement les applications."}
+      - {texte: "L'OS se limite à gérer les fichiers ; l'outil htop (Linux) est utilisé pour tracer le trafic réseau."}
+
+  - id: 9
+    type: unique
+    enonce: "Un étudiant souhaite tester les performances d'un serveur web sous charge. Quelle démarche illustre correctement l'identification des ressources, l'expérimentation et la collecte des données ?"
+    propositions:
+      - {texte: "Lire uniquement la documentation du serveur sans exécuter de tests."}
+      - {texte: "Utiliser un générateur de charge comme Apache JMeter ou ab (ApacheBench) pour simuler des requêtes, puis collecter les temps de réponse et le taux d'erreur.", correcte: true}
+      - {texte: "Installer un antivirus sur le serveur et relever le nombre de fichiers analysés."}
+      - {texte: "Exécuter une commande ls répétée en boucle et compter le nombre de lignes affichées."}
+      - {texte: "Consulter les journaux système sans lancer aucune expérimentation et conclure à la robustesse du serveur."}
+
+  - id: 10
+    type: unique
+    enonce: "Un administrateur collecte les mesures suivantes sur un serveur réseau. Quelle recommandation est la plus appropriée pour optimiser le réseau et la sécurité du serveur ?"
+    code: |
+      Heure | Bande passante (Mbps) | Latence (ms) | Perte (%) | Température CPU (°C)
+      ------+-----------------------+--------------+-----------+---------------------
+      9h    | 200                   | 15           | 0,5       | 65
+      10h   | 450                   | 25           | 1,2       | 78
+      11h   | 500                   | 30           | 2,0       | 82
+      12h   | 300                   | 20           | 0,8       | 70
+    propositions:
+      - {texte: "Maintenir la configuration actuelle ; la température CPU n'est pas préoccupante."}
+      - {texte: "Augmenter les connexions sans contrôle risque de saturer le réseau et de surchauffer le CPU."}
+      - {texte: "Réduire la bande passante aux heures creuses pour économiser de l'énergie."}
+      - {texte: "Ignorer la latence et le taux de perte, car seule la température CPU est importante."}
+      - {texte: "Prioriser le trafic critique (QoS) aux heures de pointe et surveiller/rafraîchir le serveur pour éviter une surchauffe CPU.", correcte: true}
+
+  - id: 11
+    type: multiple
+    enonce: "Parmi les propositions suivantes, lesquelles illustrent correctement des pratiques de Green IT ?"
+    propositions:
+      - {texte: "Virtualiser les serveurs pour réduire le nombre de machines physiques et optimiser leur utilisation.", correcte: true}
+      - {texte: "Mettre en veille ou éteindre les ordinateurs inactifs pour réduire la consommation énergétique.", correcte: true}
+      - {texte: "Stocker toutes les données sur des serveurs haute performance, même s'ils restent sous-utilisés."}
+      - {texte: "Choisir des centres de données utilisant des énergies renouvelables et des systèmes de refroidissement efficaces.", correcte: true}
+      - {texte: "Installer des logiciels uniquement pour améliorer la vitesse des applications, sans se préoccuper de la consommation énergétique."}
+
+  - id: 12
+    type: multiple
+    enonce: "Un data center souhaite réduire son empreinte énergétique. Les mesures actuelles sont les suivantes. Parmi les actions suivantes, lesquelles sont les plus efficaces pour réduire l'empreinte carbone ?"
+    code: |
+      Ressource                   | Consommation annuelle | CO₂ émis annuel
+      ----------------------------+-----------------------+----------------
+      Serveurs physiques (50)     | 500 000 kWh           | 250 t
+      Serveurs virtualisés (20)   | 120 000 kWh           | 60 t
+      Éclairage et climatisation  | 80 000 kWh            | 40 t
+    propositions:
+      - {texte: "Remplacer uniquement les serveurs virtuels par des modèles plus puissants."}
+      - {texte: "Virtualiser davantage de serveurs pour réduire le nombre de machines physiques.", correcte: true}
+      - {texte: "Optimiser le refroidissement et l'éclairage pour diminuer la consommation des systèmes auxiliaires.", correcte: true}
+      - {texte: "Migrer une partie des serveurs vers un cloud alimenté par des énergies renouvelables.", correcte: true}
+      - {texte: "Ignorer la consommation des systèmes auxiliaires et concentrer les efforts uniquement sur le stockage des données."}
+
+  - id: 13
+    type: multiple
+    enonce: "Pour une expérience visant à mesurer le temps de réponse d'un site web, quelle est une ressource clé à standardiser ou contrôler ?"
+    propositions:
+      - {texte: "La couleur de fond du site web."}
+      - {texte: "La vitesse de la connexion Internet utilisée pour les tests.", correcte: true}
+      - {texte: "Le nombre total de lignes de code du site."}
+      - {texte: "Le navigateur web utilisé par les développeurs du site."}
+      - {texte: "L'âge de l'ordinateur du testeur."}
+
+  - id: 14
+    type: multiple
+    enonce: "Que permet le code suivant ?"
+    code: |
+      import pandas as pd
+      data = pd.read_excel('data.xlsx')
+      data.head()
+    propositions:
+      - {texte: "Lire un fichier Excel", correcte: true}
+      - {texte: "Ecrire un fichier Excel"}
+      - {texte: "Extraire les premières lignes d'un tableur", correcte: true}
+      - {texte: "Découper des données tabulées"}
+      - {texte: "Récupérer les métadonnées"}
+
+  - id: 15
+    type: multiple
+    enonce: "Nous disposons du tableau `data` suivant. Quelle instruction Python permet de calculer la moyenne des températures ?"
+    code: |2
+         weathersit  temperature       hum  windspeed
+      0           2      34.4167  0.805833   0.160446
+      1           2      36.3478  0.696087   0.248539
+      2           1      19.6364  0.437273   0.248309
+      3           1      20.0000  0.590435   0.160296
+      4           1      22.6957  0.436957   0.186900
+    propositions:
+      - {texte: "data.mean()"}
+      - {texte: "data.average()"}
+      - {texte: 'data["temperature"].mean()', correcte: true}
+      - {texte: "mean(data)"}
+      - {texte: "data[0].mean()"}
+
+  - id: 16
+    type: unique
+    enonce: "Quel est l'objectif de la méthode des moindres carrés ?"
+    propositions:
+      - {texte: "Maximiser la moyenne"}
+      - {texte: "Minimiser la somme des carrés des erreurs", correcte: true}
+      - {texte: "Trier les données"}
+      - {texte: "Supprimer les valeurs extrêmes"}
+      - {texte: "Calculer la médiane"}
+
+  - id: 17
+    type: unique
+    enonce: "Dans une régression linéaire, la pente représente :"
+    propositions:
+      - {texte: "La moyenne des valeurs"}
+      - {texte: "L'évolution de y en fonction de x", correcte: true}
+      - {texte: "La variance"}
+      - {texte: "La médiane"}
+      - {texte: "La fréquence"}
+
+  - id: 18
+    type: unique
+    enonce: "Si tous les points sont parfaitement alignés, alors :"
+    propositions:
+      - {texte: "Les résidus sont nuls", correcte: true}
+      - {texte: "La variance est maximale"}
+      - {texte: "La médiane est nulle"}
+      - {texte: "La moyenne est nulle"}
+      - {texte: "Il n'y a pas de corrélation"}
+
+  - id: 19
+    type: unique
+    enonce: "Quel graphique permet de visualiser la distribution d'une variable numérique continue ?"
+    propositions:
+      - {texte: "Histogramme", correcte: true}
+      - {texte: "Nuage de points"}
+      - {texte: "Diagramme en lignes"}
+      - {texte: "Diagramme circulaire"}
+      - {texte: "Tableau"}
+
+  - id: 20
+    type: unique
+    enonce: "Quel est l'intérêt d'un histogramme ?"
+    propositions:
+      - {texte: "Montrer la relation entre deux variables"}
+      - {texte: "Visualiser la répartition des valeurs", correcte: true}
+      - {texte: "Calculer la moyenne"}
+      - {texte: "Trier les données"}
+      - {texte: "Calculer la corrélation"}
+
+  - id: 21
+    type: multiple
+    image: "images/q21.png"
+    enonce: "On considère le graphe suivant. On part du sommet A et les voisins d'un sommet sont visités par ordre alphabétique. Quel est l'ordre de première visite des sommets avec l'algorithme **DFS** ? (une seule bonne réponse)"
+    propositions:
+      - {texte: "A, B, C, D, E"}
+      - {texte: "A, C, B, D, E"}
+      - {texte: "A, B, D, E, C", correcte: true}
+      - {texte: "E, D, B, C, A"}
+      - {texte: "A, B, D, C, E"}
+    explication: |
+      DFS suit un chemin le plus loin possible avant de revenir en arrière, en visitant les voisins par ordre alphabétique. Depuis A, on va en B, puis en D, puis en E (cul-de-sac). On remonte jusqu'à A pour visiter C. Ordre final : A, B, D, E, C.
+      • A, B, C, D, E : c'est un parcours en largeur (BFS).
+      • A, C, B, D, E : c'est un ordre DFS possible, mais qui ne respecte pas l'ordre alphabétique.
+      • E, D, B, C, A : c'est l'ordre de fin de traitement (post-ordre), pas l'ordre de première visite.
+      • A, B, D, C, E : le parcours revient en arrière avant d'avoir exploré E, le voisin de D.
+
+  - id: 22
+    type: multiple
+    enonce: "Que représente la variable `graph` définie ci-dessous ? (une seule bonne réponse)"
+    code: |
+      graph = [
+          [0, 1, 1],
+          [1, 0, 0],
+          [1, 0, 0]
+      ]
+    propositions:
+      - {texte: "Une liste d'adjacence d'un graphe à 3 sommets."}
+      - {texte: "La matrice d'adjacence d'un graphe non orienté à 3 sommets et 2 arêtes.", correcte: true}
+      - {texte: "La matrice d'adjacence d'un graphe non orienté à 3 sommets et 3 arêtes."}
+      - {texte: "La matrice d'adjacence d'un graphe orienté à 3 sommets et 2 arcs."}
+      - {texte: "La matrice d'incidence d'un graphe à 3 sommets et 3 arêtes."}
+    explication: |
+      `graph[i][j]` vaut 1 si les sommets i et j sont reliés, 0 sinon : c'est une matrice d'adjacence. Elle est symétrique, donc le graphe est non orienté. Elle contient quatre 1, et chaque arête est comptée deux fois (`graph[i][j]` et `graph[j][i]`) : le graphe a donc 2 arêtes, 0–1 et 0–2.
+      • Liste d'adjacence : elle associerait à chaque sommet la liste de ses voisins, par exemple {0: [1, 2], 1: [0], 2: [0]}.
+      • 3 arêtes : ce serait un triangle, avec aussi `graph[1][2] = graph[2][1] = 1`.
+      • Graphe orienté à 2 arcs : la matrice ne contiendrait que deux 1, par exemple `graph[0][1]` et `graph[0][2]` ; ici, elle est symétrique.
+      • Matrice d'incidence : elle croise les sommets et les arêtes (une colonne par arête) ; avec 3 arêtes, chaque colonne contiendrait exactement deux 1, ce qui n'est pas le cas ici.
+
+  - id: 23
+    type: multiple
+    enonce: "Quelle instruction faut-il exécuter pour que ce dictionnaire représente un graphe non orienté ? (une seule bonne réponse)"
+    code: |
+      graph = {'A': ['B', 'C'], 'B': [], 'C': ['A']}
+    propositions:
+      - {texte: "graph['B'].append('A')", correcte: true}
+      - {texte: "graph['A'].append('B')"}
+      - {texte: "graph['C'].append('B')"}
+      - {texte: "graph['B'].append('C')"}
+      - {texte: "graph['C'].append('A')"}
+    explication: |
+      Dans un graphe non orienté, chaque arête apparaît dans les deux listes d'adjacence. Ici, A–C est bien présente dans les deux sens, mais A–B n'apparaît que dans la liste de A. Il faut donc ajouter 'A' dans la liste de B : `graph['B'].append('A')`.
+      • `graph['A'].append('B')` et `graph['C'].append('A')` : ces arêtes sont déjà présentes, on créerait un doublon.
+      • `graph['C'].append('B')` et `graph['B'].append('C')` : on créerait une arête B–C qui n'existe pas dans le graphe, et elle ne serait elle-même présente que dans un seul sens.
+
+  - id: 24
+    type: unique
+    image: "images/q24.png"
+    enonce: "On souhaite résoudre le système (voir image). Quel programme Python est le plus approprié ?"
+    propositions:
+      - image: "images/q24-a.png"
+        correcte: true
+      - image: "images/q24-b.png"
+      - image: "images/q24-c.png"
+      - image: "images/q24-d.png"
+    explication: "`numpy.linalg.solve()` est spécifiquement conçu pour résoudre des systèmes linéaires sous forme matricielle."
+
+  - id: 25
+    type: unique
+    enonce: "Une série temporelle est stockée dans un tableau NumPy $A$. On souhaite détecter les observations dont le z-score est supérieur à 3 en valeur absolue. Quel programme répond à cet objectif ?"
+    propositions:
+      - image: "images/q25-a.png"
+        correcte: true
+      - image: "images/q25-b.png"
+      - image: "images/q25-c.png"
+      - image: "images/q25-d.png"
+    explication: "La méthode utilise explicitement le critère statistique demandé : $|z| > 3$."
+
+  - id: 26
+    type: unique
+    image: "images/q26.png"
+    enonce: "On souhaite approximer l'intégrale (voir image) à partir de valeurs discrètes de x et y. Quelle fonction NumPy est la plus adaptée ?"
+    propositions:
+      - {image: "images/q26-a.png"}
+      - {image: "images/q26-b.png", correcte: true}
+      - {image: "images/q26-c.png"}
+      - {image: "images/q26-d.png"}
+      - {image: "images/q26-e.png"}
+    explication: "`np.trapz()` applique la méthode des trapèzes pour approximer numériquement une intégrale."
+
+  - id: 27
+    type: unique
+    enonce: "Quelle affirmation décrit **le mieux** le principe du Green IT ?"
+    propositions:
+      - {texte: "Utiliser le numérique pour réduire l'impact environnemental d'autres secteurs (transport, agriculture, énergie...)"}
+      - {texte: "Réduire l'impact environnemental du numérique lui-même, sur l'ensemble de son cycle de vie", correcte: true}
+      - {texte: "Développer des logiciels open source pour favoriser l'accès au numérique"}
+      - {texte: "Utiliser des énergies renouvelables pour alimenter les data centers uniquement"}
+      - {texte: "Concevoir des logiciels et sites web plus légers pour consommer moins de ressources"}
+
+  - id: 28
+    type: unique
+    enonce: "Parmi les propositions suivantes, laquelle **décrit le mieux** le cycle de vie complet d'un équipement numérique pris en compte par le Green IT ?"
+    propositions:
+      - {texte: "Extraction des matières premières, fabrication, distribution, utilisation, fin de vie", correcte: true}
+      - {texte: "Achat, utilisation, revente"}
+      - {texte: "Conception, développement logiciel, déploiement, maintenance"}
+      - {texte: "Achat, utilisation, mise à jour, remplacement"}
+      - {texte: "Fabrication, utilisation, recyclage uniquement"}
+
+  - id: 29
+    type: multiple
+    enonce: "Soit le code suivant en Python (≥ 3.7), sélectionner les **propositions correctes** : (2 propositions)"
+    code: |
+      d = dict()
+      d["3"] = "foo"
+      d["2"] = "bar"
+      # === BREAK POINT 1 ===
+      print(d)
+      d["2"] = "baz"
+      del d["3"]
+      # === BREAK POINT 2 ===
+      print(d["2"])
+      print(d.get("3"))
+      # === BREAK POINT 3 ===
+      d = dict()
+      d[(1, 2)] = "foo"
+      d[[1, 2]] = "bar"
+      print(d)
+    propositions:
+      - {texte: "Le BREAK POINT 1 affichera : {'2': 'bar', '3': 'foo'}."}
+      - {texte: "Le BREAK POINT 2 affichera baz, puis soulèvera une erreur KeyError."}
+      - {texte: "Le BREAK POINT 2 affichera baz, puis None", correcte: true}
+      - {texte: "Le BREAK POINT 3 déclenchera une erreur TypeError: unhashable type: 'tuple' à l'instruction d[(1, 2)] = \"foo\""}
+      - {texte: "Le BREAK POINT 3 déclenchera une erreur TypeError: unhashable type: 'list' à l'instruction d[[1, 2]] = \"bar\"", correcte: true}
+    explication: |
+      A faux. Depuis Python 3.7, un dict conserve l'ordre d'insertion. On obtient donc {'3': 'foo', '2': 'bar'}, et non {'2': 'bar', '3': 'foo'}.
+      B faux. `d.get("3")` renvoie None quand la clé est absente. C'est `d["3"]` qui lèverait une KeyError.
+      C vrai : baz puis None.
+      D faux. Un tuple est immuable, donc hachable, et peut servir de clé.
+      E vrai. Une liste est mutable, donc non hachable.
+
+  - id: 30
+    type: multiple
+    enonce: "En considérant le code suivant en Python (≥ 3.7), sélectionner les **affirmations correctes** : (3 propositions)"
+    code: |
+      d = {"a": 1, "b": 2, "c": 3}
+    propositions:
+      - {texte: "d[\"a\"] = 10 s'exécute en O(1) moyen grâce au hash de la clé, indépendamment du nombre d'éléments dans d.", correcte: true}
+      - {texte: "\"a\" in d s'exécute en O(1) moyen car on hashe la clé au lieu de parcourir toutes les clés existantes.", correcte: true}
+      - {texte: "10 in d.values() s'exécute en O(1) car les valeurs sont indexées par hash comme les clés."}
+      - {texte: "len(d) s'exécute en O(1) car ce compteur est maintenu à jour à chaque insertion/suppression, indépendamment du hachage.", correcte: true}
+      - {texte: "sorted(d.keys()) s'exécute en O(1) car les clés sont déjà indexées."}
+    explication: |
+      1. VRAI : le hash de la clé donne directement la case, sans parcours (O(n) dans le pire cas).
+      2. VRAI : on hache "a" et on regarde la case correspondante, sans parcourir les clés.
+      3. FAUX : seules les clés sont hachées. Chercher une valeur demande un parcours en O(n).
+      4. VRAI : le dict stocke un compteur d'éléments mis à jour à chaque modification.
+      5. FAUX : le hachage ne range pas les clés dans l'ordre, et le tri coûte O(n log n).

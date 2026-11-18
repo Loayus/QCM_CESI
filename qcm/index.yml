@@ -1,0 +1,5 @@
+# Liste des QCM disponibles sur le site.
+# Pour ajouter un QCM : déposer son fichier .yml dans ce dossier et l'ajouter ici.
+qcm:
+  - fichier: sciences-numerique-cctl.yml
+    titre: "Sciences fondamentales - Sciences du numérique (CCTL)"
