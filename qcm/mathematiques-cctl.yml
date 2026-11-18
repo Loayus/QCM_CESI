@@ -3,7 +3,7 @@
 # Même format que sciences-numerique-cctl.yml. Champs supplémentaires utilisés ici :
 #   bareme: (par question)      -> (optionnel) remplace le barème global pour cette question
 #   explication_image: ...      -> image affichée dans la correction (Q43, Q44)
-# Images attendues dans qcm/images/maths/ :
+# Images attendues dans images/mathematiques/ :
 #   q22-a..e  q38  q39  q43 q43-a..e q43-expl  q44 q44-a..e q44-expl   (.png)
 
 titre: "Sciences fondamentales - Mathématiques (CCTL)"
@@ -244,11 +244,11 @@ questions:
     type: unique
     enonce: "Dans un jeu de dés, un joueur lance simultanément trois dés à 6 faces équilibrés. Quelle est la probabilité que tous les trois affichent le même résultat (un « triplet ») ?"
     propositions:
-      - {image: "images/maths/q22-a.png", correcte: true}
-      - {image: "images/maths/q22-b.png"}
-      - {image: "images/maths/q22-c.png"}
-      - {image: "images/maths/q22-d.png"}
-      - {image: "images/maths/q22-e.png"}
+      - {image: "mathematiques/q22-a.png", correcte: true}
+      - {image: "mathematiques/q22-b.png"}
+      - {image: "mathematiques/q22-c.png"}
+      - {image: "mathematiques/q22-d.png"}
+      - {image: "mathematiques/q22-e.png"}
 
   - id: 23
     type: unique
@@ -407,7 +407,7 @@ questions:
 
   - id: 38
     type: unique
-    image: "images/maths/q38.png"
+    image: "mathematiques/q38.png"
     enonce: "À partir du graphe pondéré ci-dessus, on souhaite aller du sommet A au sommet F en minimisant le coût total du chemin. Quel est le plus court chemin de A vers F ?"
     propositions:
       - {texte: "A→B→D→F, coût total = 12"}
@@ -418,7 +418,7 @@ questions:
 
   - id: 39
     type: unique
-    image: "images/maths/q39.png"
+    image: "mathematiques/q39.png"
     enonce: "On considère le graphe non orienté pondéré suivant. Les nombres indiqués sur les arêtes représentent les coûts de connexion entre les sommets. Quel est le coût total de l'arbre couvrant minimal (ACM) de ce graphe ?"
     propositions:
       - {texte: "6"}
@@ -471,25 +471,25 @@ questions:
 
   - id: 43
     type: multiple
-    image: "images/maths/q43.png"
+    image: "mathematiques/q43.png"
     propositions:
-      - {image: "images/maths/q43-a.png", correcte: true}
-      - {image: "images/maths/q43-b.png", correcte: true}
-      - {image: "images/maths/q43-c.png"}
-      - {image: "images/maths/q43-d.png"}
-      - {image: "images/maths/q43-e.png"}
-    explication_image: "images/maths/q43-expl.png"
+      - {image: "mathematiques/q43-a.png", correcte: true}
+      - {image: "mathematiques/q43-b.png", correcte: true}
+      - {image: "mathematiques/q43-c.png"}
+      - {image: "mathematiques/q43-d.png"}
+      - {image: "mathematiques/q43-e.png"}
+    explication_image: "mathematiques/q43-expl.png"
 
   - id: 44
     type: unique
-    image: "images/maths/q44.png"
+    image: "mathematiques/q44.png"
     propositions:
-      - {image: "images/maths/q44-a.png"}
-      - {image: "images/maths/q44-b.png", correcte: true}
-      - {image: "images/maths/q44-c.png"}
-      - {image: "images/maths/q44-d.png"}
-      - {image: "images/maths/q44-e.png"}
-    explication_image: "images/maths/q44-expl.png"
+      - {image: "mathematiques/q44-a.png"}
+      - {image: "mathematiques/q44-b.png", correcte: true}
+      - {image: "mathematiques/q44-c.png"}
+      - {image: "mathematiques/q44-d.png"}
+      - {image: "mathematiques/q44-e.png"}
+    explication_image: "mathematiques/q44-expl.png"
 
   - id: 45
     type: unique

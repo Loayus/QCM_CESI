@@ -1,7 +1,13 @@
-# Liste des QCM disponibles sur le site.
-# Pour ajouter un QCM : déposer son fichier .yml dans ce dossier et l'ajouter ici.
+# Liste des QCM affichés sur la page d'accueil (dans cet ordre).
+# Pour ajouter un QCM : déposer son .yml dans ce dossier, ses images dans images/<nom>/, puis l'ajouter ici.
+#   icone  : calculator | code | book | brain | flask | globe | bank
+#   couleur: violet | bleu | vert | orange
 qcm:
-  - fichier: sciences-numerique-cctl.yml
-    titre: "Sciences fondamentales - Sciences du numérique (CCTL)"
   - fichier: mathematiques-cctl.yml
-    titre: "Sciences fondamentales - Mathématiques (CCTL)"
+    titre: "Mathématiques"
+    icone: calculator
+    couleur: violet
+  - fichier: sciences-numerique-cctl.yml
+    titre: "Sciences du numérique"
+    icone: code
+    couleur: bleu

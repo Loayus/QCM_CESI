@@ -79,11 +79,11 @@ questions:
     type: multiple
     enonce: "On cherche à estimer la droite de régression linéaire ($y = a + bx$) par la méthode des moindres carrés à partir de n couples $(x_i, y_i)$. Quelle est l'expression correcte du coefficient (b) (la pente) ?"
     propositions:
-      - {image: "images/q06-a.png", correcte: true}
-      - {image: "images/q06-b.png", correcte: true}
-      - {image: "images/q06-c.png"}
-      - {image: "images/q06-d.png"}
-      - {image: "images/q06-e.png"}
+      - {image: "sciences-numerique/q06-a.png", correcte: true}
+      - {image: "sciences-numerique/q06-b.png", correcte: true}
+      - {image: "sciences-numerique/q06-c.png"}
+      - {image: "sciences-numerique/q06-d.png"}
+      - {image: "sciences-numerique/q06-e.png"}
 
   - id: 7
     type: unique
@@ -254,7 +254,7 @@ questions:
 
   - id: 21
     type: multiple
-    image: "images/q21.png"
+    image: "sciences-numerique/q21.png"
     enonce: "On considère le graphe suivant. On part du sommet A et les voisins d'un sommet sont visités par ordre alphabétique. Quel est l'ordre de première visite des sommets avec l'algorithme **DFS** ? (une seule bonne réponse)"
     propositions:
       - {texte: "A, B, C, D, E"}
@@ -309,37 +309,37 @@ questions:
 
   - id: 24
     type: unique
-    image: "images/q24.png"
+    image: "sciences-numerique/q24.png"
     enonce: "On souhaite résoudre le système (voir image). Quel programme Python est le plus approprié ?"
     propositions:
-      - image: "images/q24-a.png"
+      - image: "sciences-numerique/q24-a.png"
         correcte: true
-      - image: "images/q24-b.png"
-      - image: "images/q24-c.png"
-      - image: "images/q24-d.png"
+      - image: "sciences-numerique/q24-b.png"
+      - image: "sciences-numerique/q24-c.png"
+      - image: "sciences-numerique/q24-d.png"
     explication: "`numpy.linalg.solve()` est spécifiquement conçu pour résoudre des systèmes linéaires sous forme matricielle."
 
   - id: 25
     type: unique
     enonce: "Une série temporelle est stockée dans un tableau NumPy $A$. On souhaite détecter les observations dont le z-score est supérieur à 3 en valeur absolue. Quel programme répond à cet objectif ?"
     propositions:
-      - image: "images/q25-a.png"
+      - image: "sciences-numerique/q25-a.png"
         correcte: true
-      - image: "images/q25-b.png"
-      - image: "images/q25-c.png"
-      - image: "images/q25-d.png"
+      - image: "sciences-numerique/q25-b.png"
+      - image: "sciences-numerique/q25-c.png"
+      - image: "sciences-numerique/q25-d.png"
     explication: "La méthode utilise explicitement le critère statistique demandé : $|z| > 3$."
 
   - id: 26
     type: unique
-    image: "images/q26.png"
+    image: "sciences-numerique/q26.png"
     enonce: "On souhaite approximer l'intégrale (voir image) à partir de valeurs discrètes de x et y. Quelle fonction NumPy est la plus adaptée ?"
     propositions:
-      - {image: "images/q26-a.png"}
-      - {image: "images/q26-b.png", correcte: true}
-      - {image: "images/q26-c.png"}
-      - {image: "images/q26-d.png"}
-      - {image: "images/q26-e.png"}
+      - {image: "sciences-numerique/q26-a.png"}
+      - {image: "sciences-numerique/q26-b.png", correcte: true}
+      - {image: "sciences-numerique/q26-c.png"}
+      - {image: "sciences-numerique/q26-d.png"}
+      - {image: "sciences-numerique/q26-e.png"}
     explication: "`np.trapz()` applique la méthode des trapèzes pour approximer numériquement une intégrale."
 
   - id: 27
