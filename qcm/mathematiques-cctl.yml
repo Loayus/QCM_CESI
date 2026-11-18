@@ -1,7 +1,7 @@
 # QCM : Sciences fondamentales - Mathématiques (CCTL)
 # Source : correction de l'examen du 15/11/2026 (dossier ressources/)
 # Même format que sciences-numerique-cctl.yml. Champs supplémentaires utilisés ici :
-#   bareme: (par question)      -> remplace le barème global pour cette question (Q13 : 4 propositions)
+#   bareme: (par question)      -> (optionnel) remplace le barème global pour cette question
 #   explication_image: ...      -> image affichée dans la correction (Q43, Q44)
 # Images attendues dans qcm/images/maths/ :
 #   q22-a..e  q38  q39  q43 q43-a..e q43-expl  q44 q44-a..e q44-expl   (.png)
@@ -140,7 +140,6 @@ questions:
 
   - id: 13
     type: multiple
-    bareme: {0: 1, 1: 0.5, 2: 0.1}
     enonce: "Voici un algorithme implémenté en Python. Quelle est sa complexité temporelle ?"
     code: |
       for i in range(len(arr) - 1):

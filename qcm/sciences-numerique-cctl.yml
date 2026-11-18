@@ -14,6 +14,7 @@ note_sur: 20
 # Barème déduit de la copie corrigée.
 # Clé = nombre de discordances (case cochée à tort OU bonne case non cochée).
 # Au-delà de la dernière clé listée : 0 point. Aucune réponse : 0 point.
+# Une question qui n'a qu'UNE bonne réponse vaut 1 ou 0 (barème `unique`), même si son type est `multiple`.
 bareme:
   unique:
     0: 1

@@ -252,7 +252,9 @@ function gradeQuestion(q, given) {
   q.propositions.forEach((_, i) => { if (expected.has(i) !== given.has(i)) disc++; });
   let pts = 0;
   if (given.size > 0) {
-    const table = q.bareme || (quiz.bareme && quiz.bareme[q.type]) || {};
+    // Une seule bonne réponse : tout ou rien, même si la question est de type "multiple".
+    const kind = expected.size === 1 ? "unique" : q.type;
+    const table = (kind === q.type && q.bareme) || (quiz.bareme && quiz.bareme[kind]) || {};
     pts = table[disc] ?? 0;
   }
   return { expected, disc, pts, answered: given.size > 0 };
